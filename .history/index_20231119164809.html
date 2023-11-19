@@ -37,38 +37,25 @@
     <main class="container home">
         <!-- Slideshow -->
         <div class="home__container">
-            <div class=" swiper mySwiper">
-                <div class=" swiper-wrapper">
-                    <div class=" swiper-slide">
+            <div class="slideshow">
+                <div class="slideshow__inner">
+                    <div class="slideshow__item">
                         <a href="#!" class="slideshow__link">
-                            <img src="./assets/img/slideshow/1.png" alt="" class="" />
-                        </a>
-                    </div>
-                    <div class=" swiper-slide">
-                        <a href="#!" class="slideshow__link">
-                            <img src="./assets/img/slideshow/2.png" alt="" class="" />
-                        </a>
-                    </div>
-                    <div class=" swiper-slide">
-                        <a href="#!" class="slideshow__link">
-                            <img src="./assets/img/slideshow/3.png" alt="" class="" />
-                        </a>
-                    </div>
-                    <div class=" swiper-slide">
-                        <a href="#!" class="slideshow__link">
-                            <img src="./assets/img/slideshow/4.png" alt="" class="" />
-                        </a>
-                    </div>
-                    <div class=" swiper-slide">
-                        <a href="#!" class="slideshow__link">
-                            <img src="./assets/img/slideshow/5.png" alt="" class="" />
+                            <picture>
+                                <source media="(max-width: 767.98px)" srcset="./assets/img/slideshow/item-1-md.png" />
+                                <img src="./assets/img/slideshow/item-1.png" alt="" class="slideshow__img" />
+                            </picture>
                         </a>
                     </div>
                 </div>
+
+                <div class="slideshow__page">
+                    <span class="slideshow__num">1</span>
+                    <span class="slideshow__slider"></span>
+                    <span class="slideshow__num">5</span>
+                </div>
             </div>
-
         </div>
-
 
         <!-- Browse Categories -->
         <section class="home__container">
@@ -517,10 +504,6 @@
     <script>
         load("#footer", "./templates/footer.html");
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./assets/js/slideshow.js"></script>
-
 </body>
 
 </html>
