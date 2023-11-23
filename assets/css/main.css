@@ -4363,41 +4363,6 @@ html {
   width: 24px;
   height: 100%;
 }
-.one{
-  background-color: white;
-  color: black;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-  display: flex;
-}
 
-
-.profile__main {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-}
-
-.two {
-  background-color: white;
-  color: black;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-  display: flex   ;
-  
-}
-.three{
-  background-color: white;
-  color: black;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-  display: flex;
-}
 
 /*# sourceMappingURL=main.css.map */
