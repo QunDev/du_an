@@ -1,3 +1,7 @@
+<div class="rows">
+  <a href="index.php?act=formCreateProduct"><button class="btn">Create</button></a>
+</div>
+
 <h1>Table Category</h1>
 
 <!-- <form
@@ -23,10 +27,10 @@
           <select name="filterCategory" id="idCategory">
             <option value="0" selected >All</option>
             <?php
-                foreach ($data as $category) {
-                    extract($category);
-                    echo '<option value="'.$id.'">'.$name.'</option>';
-                }
+                // foreach ($data as $category) {
+                //     extract($category);
+                //     echo '<option value="'.$id.'">'.$name.'</option>';
+                // }
             ?>
             
           </select>
@@ -47,43 +51,45 @@
           <th>Img</th>
           <th>CreatedAt</th>
           <th>Actions</th>
+          
         </tr>
       </thead>
       <tbody>
       <?php
         foreach($dataProducts as $product) {
           extract($product);
-          $imgPath = "../uploads/".$img;
+          $desc =$description;
+          $imgPath = "../uploads/".$imageURL;
           if(is_file($imgPath)) {
               $image = '<img src="'.$imgPath.'" alt="" height="80">';
           } else {
               $image = "No photo";
           }
-          $idProduct =$id;
-          foreach ($data as $category) {
+          foreach ($allCategories as $category) {
             extract($category);
-            if ($idCategory == $id) {
-              $idCategory = $name;
+            if ($categoryId == $brand) {
+              $brand = $categoryName;
+              echo '<tr>
+                    <td> '.$productID.' </td>
+                    <td> '.$productName.' </td>
+                    <td> '.$desc.' </td>
+                    <td> '.$price.' </td>
+                    <td> '.$stock.' </td>
+                    <td> '.$brand.' </td>
+                    <td> '.$image.' </td>
+                    <td> '.$createdAt.' </td>
+                    <td>
+                        <button><a href="./?act=loadOneProduct&id='.$productID.'">Update</a></button>
+                        <button class="btnDelete" data-id="'.$productID.'">Delete</button>
+                    </td>
+                    </tr>';
             }
           }
-          echo '<tr>
-          <td> '.$idProduct.' </td>
-          <td> '.$nameProduct.' </td>
-          <td> '.$price.' </td>
-          <td> '.$image.' </td>
-          <td> '.$view.' </td>
-          <td> '.$desc.' </td>
-          <td> '.$idCategory.' </td>
-          <td>
-              <button><a href="index.php?action=loadOneProduct&id='.$idProduct.'">Cập nhật</a></button>
-              <button><a href="index.php?action=deleteProduct&id='.$idProduct.'">Xoá</a></button>
-          </td>
-          </tr>';
+          
+          
         }
       ?>
       </tbody>
 </table>
 
-<div class="rows">
-  <a href="index.php?action=addProduct"><button class="btn">Create</button></a>
-</div>
+<script src="./assets/js/products.js"></script>
