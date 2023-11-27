@@ -1,29 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grocery Mart</title>
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <!-- Fonts -->
-    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="./assets/css/main.css" />
-
-    <!-- Scripts -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="./assets/js/scripts.js"></script>
-</head>
 
 <body>
     <!-- Header -->
@@ -222,7 +198,7 @@
                                 <div class="col">
                                     <article class="product-card">
                                         <div class="product-card__img-wrap">
-                                            <a href="./product-detail.html">
+                                            <a href="./?act=product-detail&id='.$productID.'">
                                                 <img src="'.$image.'" alt="'.$noImg.'" class="product-card__thumb" />
                                             </a>
                                             <button class="like-btn product-card__like-btn">
@@ -231,7 +207,7 @@
                                             </button>
                                         </div>
                                         <h3 class="product-card__title">
-                                            <a href="./product-detail.html">'.$productName.'</a>
+                                            <a href="./?act=product-detail&id='.$productID.'">'.$productName.'</a>
                                         </h3>
                                         <p class="product-card__brand">'.$brand.'</p>
                                         <div class="product-card__row">

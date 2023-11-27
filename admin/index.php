@@ -3,7 +3,7 @@
     include "../model/categories.php";
     include "../model/products.php";
 
-    include "../templates/header.php";
+    include "../templates/header-admin.php";
 
     if(isset($_GET["act"])) {
         $action = $_GET["act"];
