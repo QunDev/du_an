@@ -1,15 +1,14 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-
 <body>
     <!-- Header -->
     <header id="header" class="header"></header>
     <script>
-        load("#header", "./templates/header.html");
+        load("#header", "./templates/header-logined.php");
     </script>
 
-    <!-- MAIN -->
-    <main class="container home">
+   <!-- MAIN -->
+   <main class="container home">
         <!-- Slideshow -->
         <div class="home__container">
             <div class=" swiper mySwiper">

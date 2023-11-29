@@ -169,10 +169,10 @@
                                                 </div>
                                                 <div class="prod-info__card">
                                                     <div class="prod-info__row">
-                                                        <span class="prod-info__price">$500.00</span>
+                                                        <span class="prod-info__price">$<?php echo $price ?></span>
                                                         <span class="prod-info__tax">10%</span>
                                                     </div>
-                                                    <p class="prod-info__total-price">$540.00</p>
+                                                    <p class="prod-info__total-price">$<?php echo $price/100*10 + $price ?></p>
                                                     <div class="prod-info__row">
                                                         <button class="btn btn--primary prod-info__add-to-cart">
                                                             Add to cart

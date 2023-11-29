@@ -33,4 +33,16 @@
             pdo_execute($sql);
         }
     }
+
+// Đếm số lượng sản phẩm
+    function countProduct() {
+        $sql = "select count(productName) from products where stock > 0;";
+        return pdo_query_value($sql);
+    }
+
+// Lọc sản phẩm theo danh mục 
+    function filterProductByCategory($categoryId) {
+        $sql = "select * FROM `products` where 1 and `brand` LIKE '%".$categoryId."%';";
+        return pdo_query($sql);
+    }
 ?>
