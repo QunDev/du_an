@@ -1,4 +1,5 @@
 <?php
+
     extract($dataProduct);   
     $desc = $description;
     $imgPath = "./uploads/".$imageURL;
@@ -15,13 +16,11 @@
           $brand = $categoryName;
         }
     }
+    extract($dataUser);
 ?>
     <body>
         <!-- Header -->
         <header id="header" class="header"></header>
-        <script>
-            load("#header", "./templates/header.html");
-        </script>
 
         <!-- MAIN -->
         <main class="product-page">
@@ -95,7 +94,7 @@
                             </div>
                         </div>
                         <div class="col-7 col-xl-6 col-lg-12">
-                            <form action="" class="form">
+                            <form action="./?act=addProduct&id=<?php echo $productID ?>&userId=<?php echo $userID ?>&price=<?php echo $price/100*10 + $price ?>" class="form" method="post">
                                 <section class="prod-info">
                                     <h1 class="prod-info__heading">
                                         <?php echo $productName; ?>
@@ -174,7 +173,7 @@
                                                     </div>
                                                     <p class="prod-info__total-price">$<?php echo $price/100*10 + $price ?></p>
                                                     <div class="prod-info__row">
-                                                        <button class="btn btn--primary prod-info__add-to-cart">
+                                                        <button class="btn btn--primary prod-info__add-to-cart" type="submit">
                                                             Add to cart
                                                         </button>
                                                         <button class="like-btn prod-info__like-btn">

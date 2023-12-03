@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
 
     <!-- Scripts -->

@@ -1,3 +1,11 @@
+<?php
+    $subTotal = 0;
+    foreach ($dataOrderDetial as $data) {
+        extract($data);
+        $subTotal += $subtotal;
+    }
+?>
+
 <div class="container">
     <div class="top-bar">
         <!-- More -->
@@ -95,7 +103,7 @@
                             </div>
                             <div class="act-dropdown__separate"></div>
                             <div class="act-dropdown__checkout">
-                                <a href="./checkout.html"
+                                <a href="./?act=checkout"
                                     class="btn btn--primary btn--rounded act-dropdown__checkout-btn">
                                     Check Out All
                                 </a>
@@ -109,7 +117,7 @@
                 <div class="top-act__btn-wrap">
                     <button class="top-act__btn">
                         <img src="./assets/icons/buy.svg" alt="" class="icon top-act__icon" />
-                        <span class="top-act__title">$65.42</span>
+                        <span class="top-act__title">$<?php echo $subTotal ?></span>
                     </button>
 
                     <!-- Dropdown -->
@@ -176,7 +184,7 @@
                                 </div>
                             </div>
                             <div class="act-dropdown__checkout">
-                                <a href="./checkout.html"
+                                <a href="./?act=checkout"
                                     class="btn btn--primary btn--rounded act-dropdown__checkout-btn">
                                     Check Out All
                                 </a>
@@ -229,3 +237,7 @@
         </div>
     </div>
 </div>
+
+
+
+<body>

@@ -1,42 +1,19 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-
-<body>
     <!-- Header -->
     <header id="header" class="header"></header>
-    <script>
-        load("#header", "./templates/header.html");
-    </script>
 
     <!-- MAIN -->
     <main class="container home">
         <!-- Slideshow -->
         <div class="home__container">
-            <div class=" swiper mySwiper">
-                <div class=" swiper-wrapper">
-                    <div class=" swiper-slide">
+            <div class="slideshow">
+                <div class="slideshow__inner">
+                    <div class="slideshow__item">
                         <a href="#!" class="slideshow__link">
-                            <img src="./assets/img/slideshow/1.png" alt="" class="" />
-                        </a>
-                    </div>
-                    <div class=" swiper-slide">
-                        <a href="#!" class="slideshow__link">
-                            <img src="./assets/img/slideshow/2.png" alt="" class="" />
-                        </a>
-                    </div>
-                    <div class=" swiper-slide">
-                        <a href="#!" class="slideshow__link">
-                            <img src="./assets/img/slideshow/3.png" alt="" class="" />
-                        </a>
-                    </div>
-                    <div class=" swiper-slide">
-                        <a href="#!" class="slideshow__link">
-                            <img src="./assets/img/slideshow/4.png" alt="" class="" />
-                        </a>
-                    </div>
-                    <div class=" swiper-slide">
-                        <a href="#!" class="slideshow__link">
-                            <img src="./assets/img/slideshow/5.png" alt="" class="" />
+                            <picture>
+                                <source media="(max-width: 767.98px)" srcset="./assets/img/slideshow/1.png" />
+                                <img src="./assets/img/slideshow/1.png" alt="" class="slideshow__img" />
+                            </picture>
                         </a>
                     </div>
                 </div>

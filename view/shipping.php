@@ -1,6 +1,4 @@
-<body>
-        <!-- Header -->
-        <header id="header" class="header"></header>
+
 
         <!-- MAIN -->
         <main class="checkout-page">
@@ -25,7 +23,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Checkout</a>
+                            <a href="./?act=checkout" class="breadcrumbs__link">
+                                Checkout
+                                <img src="./assets/icons/arrow-right.svg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./?act=shipping" class="breadcrumbs__link breadcrumbs__link--current">Shipping</a>
                         </li>
                     </ul>
                 </div>
@@ -35,6 +39,81 @@
                     <div class="row gy-xl-3">
                         <div class="col-8 col-xl-12">
                             <div class="cart-info">
+                                <h1 class="cart-info__heading">1. Shipping, arrives between Mon, May 16—Tue, May 24</h1>
+                                <div class="cart-info__separate"></div>
+
+                                <!-- Checkout address -->
+                                <div class="user-address">
+                                    <div class="user-address__top">
+                                        <div>
+                                            <h2 class="user-address__title">Shipping address</h2>
+                                            <p class="user-address__desc">Where should we deliver your order?</p>
+                                        </div>
+                                        <button
+                                            class="user-address__btn btn btn--primary btn--rounded btn--small js-toggle"
+                                            toggle-target="#add-new-address"
+                                        >
+                                            <img src="./assets/icons/plus.svg" alt="" />
+                                            Add a new address
+                                        </button>
+                                    </div>
+                                    <div class="user-address__list">
+                                        <!-- Empty message -->
+                                        <!-- <p class="user-address__message">
+                                            Not address yet.
+                                            <a class="user-address__link js-toggle" href="#!" toggle-target="#add-new-address">Add a new address</a>
+                                        </p> -->
+
+                                        <?php
+                                            foreach ($dataAddress as $data) {
+                                                extract($data);
+                                                echo '
+                                                    <article class="address-card">
+                                                        <div class="address-card__left">
+                                                            <div class="address-card__choose">
+                                                                <label class="cart-info__checkbox">
+                                                                    <input
+                                                                        type="radio"
+                                                                        name="shipping-adress"
+                                                                        checked
+                                                                        class="cart-info__checkbox-input"
+                                                                        id="shipping-adress"
+                                                                        data-idAddress="'.$shippingAddressId.'"
+                                                                    />
+                                                                </label>
+                                                            </div>
+                                                            <div class="address-card__info">
+                                                                <h3 class="address-card__title">'.$name.'</h3>
+                                                                <p class="address-card__desc">
+                                                                    '.$address.'
+                                                                </p>
+                                                                <ul class="address-card__list">
+                                                                    <li class="address-card__list-item">Shipping</li>
+                                                                    <li class="address-card__list-item">Delivery from store</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="address-card__right">
+                                                            <div class="address-card__ctrl">
+                                                                <button
+                                                                    class="cart-info__edit-btn js-toggle"
+                                                                    toggle-target="#add-new-address"
+                                                                >
+                                                                    <img class="icon" src="./assets/icons/edit.svg" alt="" />
+                                                                    Edit
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                ';
+                                            }
+                                        ?>
+                                    </div>
+                                </div>
+
+                                <div class="cart-info__separate"></div>
+
+                                <h2 class="cart-info__sub-heading">Items details</h2>
                                 <div class="cart-info__list">
                                     <!-- Cart item 1 -->
                                     <?php
@@ -79,7 +158,7 @@
                                                                     />
                                                                 </div>
                                                                 <div class="cart-item__input">
-                                                                    <button id="prev" class="cart-item__input-btn" toggle-target="#prevMin-confirm">
+                                                                    <button id="prev" class="cart-item__input-btn">
                                                                         <img class="icon" src="./assets/icons/minus.svg" alt="" />
                                                                     </button>
                                                                     <span id="important" data-quantity="'.$quantity.'" data-id="'.$productID.'">'.$quantity.'</span>
@@ -128,9 +207,11 @@
                                         <div class="col-4 col-xxl-5">
                                             <div class="cart-info__row">
                                                 <span>Subtotal:</span>
-                                                <span>$<?php
+                                                <span>$
+                                                <?php
                                                     echo $subTotal;
-                                                ?></span>
+                                                ?>
+                                                </span>
                                             </div>
                                             <div class="cart-info__row">
                                                 <span>Shipping:</span>
@@ -139,9 +220,11 @@
                                             <div class="cart-info__separate"></div>
                                             <div class="cart-info__row cart-info__row--bold">
                                                 <span>Total:</span>
-                                                <span>$<?php
+                                                <span>$
+                                                <?php
                                                     echo $subTotal + 3;
-                                                ?></span>
+                                                ?>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -157,7 +240,7 @@
                                 <div class="cart-info__row">
                                     <span>Price <span class="cart-info__sub-label">(Total)</span></span>
                                     <span>$
-                                        <?php
+                                    <?php
                                             echo $subTotal + 3;
                                         ?>
                                     </span>
@@ -165,13 +248,11 @@
                                 <div class="cart-info__separate"></div>
                                 <div class="cart-info__row">
                                     <span>Estimated Total</span>
-                                    <span>$
-                                        <?php
+                                    <span>$<?php
                                             echo $subTotal + 3;
-                                        ?>
-                                    </span>
+                                        ?></span>
                                 </div>
-                                <a href="./?act=shipping" class="cart-info__next-btn btn btn--primary btn--rounded" id="nextURL" data-count="<?php echo $countOrders; ?>">
+                                <a href="./?act=payment" class="cart-info__next-btn btn btn--primary btn--rounded" id="nextURL">
                                     Continue to checkout
                                 </a>
                             </div>
@@ -213,8 +294,6 @@
                     <button
                         class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin js-toggle"
                         toggle-target="#delete-confirm"
-                        id="delete"
-                        type="button"
                     >
                         Delete
                     </button>
@@ -223,19 +302,85 @@
             <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
         </div>
 
-        <!-- Modal: confirm min shopping cart item -->
-        <div id="prevMin-confirm" class="modal modal--small hide">
+        <!-- Modal: address new shipping address -->
+        <div id="add-new-address" class="modal hide" style="--content-width: 650px">
             <div class="modal__content">
-                <p class="modal__text">Min: 1</p>
-                <div class="modal__bottom">
-                    <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#prevMin-confirm">
-                        Ok
-                    </button>
-                </div>
+                <form action="addShippingAddress" class="form" method="post">
+                    <h2 class="modal__heading">Add new shipping address</h2>
+                    <div class="modal__body">
+                        <div class="form__row">
+                            <div class="form__group">
+                                <label for="name" class="form__label form__label--small">Name</label>
+                                <div class="form__text-input form__text-input--small">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        placeholder="Name"
+                                        class="form__input"
+                                        required
+                                        minlength="2"
+                                    />
+                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                </div>
+                                <p class="form__error">Name must be at least 2 characters</p>
+                            </div>
+                            <div class="form__group">
+                                <label for="phone" class="form__label form__label--small">Phone</label>
+                                <div class="form__text-input form__text-input--small">
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        id="phone"
+                                        placeholder="Phone"
+                                        class="form__input"
+                                        required
+                                        minlength="10"
+                                    />
+                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                </div>
+                                <p class="form__error">Phone must be at least 10 characters</p>
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <label for="address" class="form__label form__label--small">Address</label>
+                            <div class="form__text-area">
+                                <textarea
+                                    name="address"
+                                    id="address"
+                                    placeholder="Address (Area and street)"
+                                    class="form__text-area-input"
+                                    required
+                                ></textarea>
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                            <p class="form__error">Address not empty</p>
+                        </div>
+                        <div class="form__group form__group--inline">
+                            <label class="form__checkbox">
+                                <input type="checkbox" name="" id="" class="form__checkbox-input d-none" />
+                                <span class="form__checkbox-label">Set as default address</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal__bottom">
+                        <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">
+                            Cancel
+                        </button>
+                        <button
+                            class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle"
+                            toggle-target="#add-new-address"
+                            id="shippingAddress"
+                            data-id="<?php echo $userId ?>"
+                        >
+                            Create
+                        </button>
+                    </div>
+                </form>
             </div>
-            <div class="modal__overlay js-toggle" toggle-target="#prevMin-confirm"></div>
+            <div class="modal__overlay"></div>
         </div>
     </body>
 </html>
 
-<script src="./assets/js/order.js"></script>
+<script src="./assets/js/shipping.js"></script>

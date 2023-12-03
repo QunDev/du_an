@@ -5,9 +5,22 @@
     include "./model/categories.php";
     include "./model/products.php";
     include "./model/client.php";
+    include "./model/cart.php";
     include "./templates/header.php";
     $dataCategories = getAllCategories();
     $quantity = countProduct();
+    $countOrders = countOrder();
+    $dataAddress = getShippingAddress();
+    
+
+    if(isset($_SESSION["email"])) {
+        $dataUser = getUserByEmail($_SESSION["email"]);
+        $dataOrderDetial = getOrder($_SESSION["email"]);
+        include "./templates/header-logined.php";
+    } else {
+        include "./templates/header.php";
+    }
+    
     if(isset($_GET["act"])) {
         $action = $_GET["act"];
         switch ($action) {
@@ -52,15 +65,86 @@
                 }
                 break;
             case 'logined':
-                if(isset($_SESSION["email"]) || $_COOKIE["email"]) {
+                if(isset($_SESSION["email"])) {
                     $dataProducts = getProducts();
                     include "./view/home-logined.php";
                 } else {
                     header("location: ./");
                 }
                 break;
+            case 'addProduct':
+                $user = $_GET["userId"];
+                $productId = $_GET["id"];
+                $unitPrice = $_GET["price"];
+                if(isset($_SESSION["email"]) || isset($_COOKIE["email"])) {
+                    foreach ($dataOrderDetial as $data) {
+                        extract($data);
+                        if($productId == $productID) {
+                            $quantity++;
+                            updateQuantity($productId, $quantity, $unitPrice, date("l jS \of F Y h:i:s A"));
+                            exit;
+                        }
+                    }
+                }
+                $unitPrice = $_GET["price"];
+                addProductToOrder($user, $productId, 1, $unitPrice, date("l jS \of F Y h:i:s A"));
+                break;
             case 'checkout':
-                include "./view/checkout.php";
+                if(isset($_SESSION["email"]) || isset($_COOKIE["email"])) {
+                    $user = $_SESSION["email"];
+                    $dataOrderDetial = getOrder($user);
+                    include "./view/checkout.php";
+                    
+                }
+                break;
+            case 'prev':
+                prevProduct($_GET["quantity"], $_GET["id"]);
+                if(isset($_SESSION["email"])) {
+                    $user = $_SESSION["email"];
+                    $dataOrderDetial = getOrder($user);
+                    include "./view/checkout.php"; 
+                }
+                break;
+            case 'next':
+                nextProduct($_GET["quantity"], $_GET["id"]);
+                if(isset($_SESSION["email"])) {
+                    $user = $_SESSION["email"];
+                    $dataOrderDetial = getOrder($user);
+                    include "./view/checkout.php"; 
+                }
+                break;
+            case 'deleteOrder':
+                deleteOrder($_GET["id"]);
+                if(isset($_SESSION["email"])) {
+                    $user = $_SESSION["email"];
+                    $dataOrderDetial = getOrder($user);
+                    include "./view/checkout.php"; 
+                }
+                break;
+            case 'shipping':
+                $user = $_SESSION["email"];
+                $dataOrderDetial = getOrder($user);
+                
+                include "./view/shipping.php";
+                break;
+            case 'addAddress':
+                $id = $_GET["id"];
+                $name = $_GET["name"];
+                $phone = $_GET["phone"];
+                $address = $_GET["address"];
+                addAddress($id, $name, $phone, $address);
+                include "./view/shipping.php";
+                break;
+            case 'payment':
+                $dataAddressById = getAddressById($_GET["id"]);
+                include "./view/payment.php";
+                break;
+            case 'buySuccess':
+                
+                break;
+            case 'profile':
+                $dataProduct = getOrder($_GET["id"]);
+                include "./view/profile.php";
                 break;
             default:
                 $dataProducts = getProducts();

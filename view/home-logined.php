@@ -1,47 +1,8 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<body>
-    <!-- Header -->
-    <header id="header" class="header"></header>
-    <script>
-        load("#header", "./templates/header-logined.php");
-    </script>
 
    <!-- MAIN -->
    <main class="container home">
-        <!-- Slideshow -->
-        <div class="home__container">
-            <div class=" swiper mySwiper">
-                <div class=" swiper-wrapper">
-                    <div class=" swiper-slide">
-                        <a href="#!" class="slideshow__link">
-                            <img src="./assets/img/slideshow/1.png" alt="" class="" />
-                        </a>
-                    </div>
-                    <div class=" swiper-slide">
-                        <a href="#!" class="slideshow__link">
-                            <img src="./assets/img/slideshow/2.png" alt="" class="" />
-                        </a>
-                    </div>
-                    <div class=" swiper-slide">
-                        <a href="#!" class="slideshow__link">
-                            <img src="./assets/img/slideshow/3.png" alt="" class="" />
-                        </a>
-                    </div>
-                    <div class=" swiper-slide">
-                        <a href="#!" class="slideshow__link">
-                            <img src="./assets/img/slideshow/4.png" alt="" class="" />
-                        </a>
-                    </div>
-                    <div class=" swiper-slide">
-                        <a href="#!" class="slideshow__link">
-                            <img src="./assets/img/slideshow/5.png" alt="" class="" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        
 
         <!-- Browse Categories -->
         <section class="home__container">
