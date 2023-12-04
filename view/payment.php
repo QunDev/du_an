@@ -220,6 +220,9 @@
                                             ?></span>
                                     </div>
                                     <input type="text" name="price" value="<?php echo $subTotal + 3; ?>">
+                                    <input type="text" name="userId" value="<?php echo $userId; ?>">
+                                    <input type="text" name="status" value="1">
+                                    <input type="text" name="address" value="<?php  echo $address; ?>">
                                         <input type="submit" class="cart-info__next-btn btn btn--primary btn--rounded" value="Pay $<?php
                                                 echo $subTotal + 3;
                                             ?>" name="payment">

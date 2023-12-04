@@ -140,7 +140,8 @@
                 include "./view/payment.php";
                 break;
             case 'buySuccess':
-                
+                echo $_POST["userId"];
+                buySuccess($_POST["userId"], date("l jS \of F Y h:i:s A"), $_POST["price"], $_POST["status"], $_GET["paymentMethod"], $_POST["address"]);
                 break;
             case 'profile':
                 $dataProduct = getOrder($_GET["id"]);
