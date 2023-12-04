@@ -1,14 +1,18 @@
 <style>
-      button:active{
-       
-        
-       
-        box-shadow: 
-            0 0px 0 #0005,
-            0 0px 0 #BD1360,
-            0 0px 0 7px black,
-            0 0 30px 30px gray;
-        transform: translateY(5px);
+     button:hover{
+       background-color: violet;
+       color: brown;
+    }
+    .btn-create {
+      border: 2px solid pink;
+    }
+    .btnDelete {
+      margin-left: 16px;
+    }
+    .btnDelete, .thinhdeptrai {
+      border: 2px solid pink  ;
+      padding: 8px 16px;
+      border-radius: 999px;
     }
   p{
     font-size: 30px;
@@ -67,7 +71,7 @@
   }
 </style>
 <div class="rows">
-  <a href="index.php?act=formCreateCategory"><button class="btn">Thêm Danh mục</button></a>
+  <a href="index.php?act=formCreateCategory"><button class="btn btn-create">Thêm Danh mục</button></a>
 </div>
 
 <p> <Strong  > Danh Mục Sản Phẩm</Strong> </p>
@@ -81,7 +85,7 @@
       <th>Mô tả</th>
       <th>Hành Động</th>
     </tr>
-  </thead>
+  </thead c>
   <tbody>
     <?php foreach ($allCategories as $category) {
       extract($category);
@@ -89,8 +93,8 @@
         <td> ' . $categoryId . ' </td>
         <td> ' . $categoryName . ' </td>
         <td> ' . $description . ' </td>
-        <td>
-            <button><a href="./?act=loadOneCategory&id=' . $categoryId . '">Cập Nhật</a></button>
+        <td >
+            <button class="thinhdeptrai" ><a href="./?act=loadOneCategory&id=' . $categoryId . '">Cập Nhật</a></button>
             <button class="btnDelete" data-id="' . $categoryId . '">Xóa</button>
         </td>
         </tr>';
