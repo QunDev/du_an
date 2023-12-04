@@ -6,12 +6,12 @@
         id="form-1"
         enctype="multipart/form-data"
       >
-        <h3 class="heading">Add Category New</h3>
+        <h3 class="heading">Thêm danh mục mới</h3>
 
         <div class="spacer"></div>
 
         <div class="form-group">
-          <label for="categoryName" class="form-label">Category Name</label>
+          <label for="categoryName" class="form-label">Tên danh mục</label>
           <input
             id="categoryName"
             name="categoryName"
@@ -25,7 +25,7 @@
         </div>
 
         <div class="form-group">
-          <label for="description" class="form-label">Description</label>
+          <label for="description" class="form-label">Mô Tả</label>
           <input
             id="description"
             name="description"
@@ -37,8 +37,8 @@
           <span class="form-message"></span>
         </div>
 
-        <input value="Create" type="button" class="form-submit">  
-        <button class="form-submit" type="button"><a href="./?act=listCategories">Category</a></button>
+        <input value="Thêm mới" type="button" class="form-submit">  
+        <button class="form-submit" type="button"><a href="./?act=listCategories">Danh Mục</a></button>
 
         <!-- <button class="form-submit" type="button" name="btnSubmit">Thêm</button> -->
         
