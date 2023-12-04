@@ -18,18 +18,18 @@
                     <ul class="breadcrumbs checkout-page__breadcrumbs">
                         <li>
                             <a href="./" class="breadcrumbs__link">
-                                Home
+                                Trang chủ
                                 <img src="./assets/icons/arrow-right.svg" alt="" />
                             </a>
                         </li>
                         <li>
                             <a href="./?act=checkout" class="breadcrumbs__link">
-                                Checkout
+                                Thanh toán 
                                 <img src="./assets/icons/arrow-right.svg" alt="" />
                             </a>
                         </li>
                         <li>
-                            <a href="./?act=shipping" class="breadcrumbs__link breadcrumbs__link--current">Shipping</a>
+                            <a href="./?act=shipping" class="breadcrumbs__link breadcrumbs__link--current">Giao hàng</a>
                         </li>
                     </ul>
                 </div>
@@ -39,22 +39,22 @@
                     <div class="row gy-xl-3">
                         <div class="col-8 col-xl-12">
                             <div class="cart-info">
-                                <h1 class="cart-info__heading">1. Shipping, arrives between Mon, May 16—Tue, May 24</h1>
+                                <h1 class="cart-info__heading">1. Vận chuyển, đến từ Thứ Hai, ngày 16 tháng 5—Thứ Ba, ngày 24 tháng 5</h1>
                                 <div class="cart-info__separate"></div>
 
                                 <!-- Checkout address -->
                                 <div class="user-address">
                                     <div class="user-address__top">
                                         <div>
-                                            <h2 class="user-address__title">Shipping address</h2>
-                                            <p class="user-address__desc">Where should we deliver your order?</p>
+                                            <h2 class="user-address__title">Địa chỉ giao hàng</h2>
+                                            <p class="user-address__desc">Chúng tôi nên giao hàng cho bạn ở đâu?</p>
                                         </div>
                                         <button
                                             class="user-address__btn btn btn--primary btn--rounded btn--small js-toggle"
                                             toggle-target="#add-new-address"
                                         >
                                             <img src="./assets/icons/plus.svg" alt="" />
-                                            Add a new address
+                                            Thêm địa chỉ
                                         </button>
                                     </div>
                                     <div class="user-address__list">
@@ -113,7 +113,7 @@
 
                                 <div class="cart-info__separate"></div>
 
-                                <h2 class="cart-info__sub-heading">Items details</h2>
+                                <h2 class="cart-info__sub-heading">chi tiết sản phẩm </h2>
                                 <div class="cart-info__list">
                                     <!-- Cart item 1 -->
                                     <?php
@@ -200,30 +200,30 @@
                                                         src="./assets/icons/arrow-down-2.svg"
                                                         alt=""
                                                     />
-                                                    Continue Shopping
+                                                    Tiếp tục mua
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="col-4 col-xxl-5">
                                             <div class="cart-info__row">
-                                                <span>Subtotal:</span>
-                                                <span>$
+                                                <span>Tổng phụ:</span>
+                                                <span>đ
                                                 <?php
                                                     echo $subTotal;
                                                 ?>
                                                 </span>
                                             </div>
                                             <div class="cart-info__row">
-                                                <span>Shipping:</span>
-                                                <span>$3</span>
+                                                <span>Giao Hàng:</span>
+                                                <span>69.000đ</span>
                                             </div>
                                             <div class="cart-info__separate"></div>
                                             <div class="cart-info__row cart-info__row--bold">
-                                                <span>Total:</span>
-                                                <span>$
+                                                <span>Tổng:</span>
+                                                <span>
                                                 <?php
                                                     echo $subTotal + 3;
-                                                ?>
+                                                ?>đ
                                                 </span>
                                             </div>
                                         </div>
@@ -234,26 +234,26 @@
                         <div class="col-4 col-xl-12">
                             <div class="cart-info">
                                 <div class="cart-info__row">
-                                    <span>Subtotal <span class="cart-info__sub-label">(items)</span></span>
+                                    <span>Tổng <span class="cart-info__sub-label">(Sản phẩm)</span></span>
                                     <span><?php echo $countOrders; ?></span>
                                 </div>
                                 <div class="cart-info__row">
-                                    <span>Price <span class="cart-info__sub-label">(Total)</span></span>
-                                    <span>$
+                                    <span>Price <span class="cart-info__sub-label">(Tổng)</span></span>
+                                    <span>
                                     <?php
                                             echo $subTotal + 3;
-                                        ?>
+                                        ?>đ
                                     </span>
                                 </div>
                                 <div class="cart-info__separate"></div>
                                 <div class="cart-info__row">
-                                    <span>Estimated Total</span>
+                                    <span>Tổng phải trả</span>
                                     <span>$<?php
                                             echo $subTotal + 3;
                                         ?></span>
                                 </div>
                                 <a href="./?act=payment" class="cart-info__next-btn btn btn--primary btn--rounded" id="nextURL">
-                                    Continue to checkout
+                                    Tiếp tục thanh toán
                                 </a>
                             </div>
                             <div class="cart-info">

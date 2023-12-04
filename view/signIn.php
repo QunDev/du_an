@@ -4,7 +4,7 @@
             <div class="auth__intro d-md-none">
                 <img src="./assets/img/auth/intro.svg" alt="" class="auth__intro-img" />
                 <p class="auth__intro-text">
-                    The best of luxury brand values, high quality products, and innovative services
+                    sản phẩm chất lượng cao và dịch vụ sáng tạo
                 </p>
             </div>
 
@@ -15,10 +15,9 @@
                         <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
                         <h2 class="logo__title">grocerymart</h2>
                     </a>
-                    <h1 class="auth__heading">Hello Again!</h1>
+                    <h1 class="auth__heading">Xin chào</h1>
                     <p class="auth__desc">
-                        Welcome back to sign in. As a returning customer, you have access to your previously saved all
-                        information.
+                        chào mừng đến grocerymart
                     </p>
                     <form action="./?act=checkAccount" class="form auth__form" method="post">
                         <div class="form__group">
@@ -35,7 +34,7 @@
                                 <img src="./assets/icons/message.svg" alt="" class="form__input-icon" />
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                             </div>
-                            <p class="form__error">Email is not in correct format</p>
+                            <p class="form__error">Email không đúng</p>
                         </div>
                         <div class="form__group">
                             <div class="form__text-input">
@@ -51,26 +50,26 @@
                                 <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                             </div>
-                            <p class="form__error">Password must be at least 6 characters</p>
+                            <p class="form__error">Mật khẩu phải có ít nhất 6 ký tự</p>
                         </div>
                         <div class="form__group form__group--inline">
                             <label class="form__checkbox">
                                 <input type="checkbox" name="checkbox" id="checkbox" class="form__checkbox-input d-none" />
-                                <span class="form__checkbox-label">Set as default card</span>
+                                <span class="form__checkbox-label">đặt làm thẻ</span>
                             </label>
-                            <a href="./reset-password.html" class="auth__link form__pull-right">Forgot password?</a>
+                            <a href="./reset-password.html" class="auth__link form__pull-right"> Quên mật khẩu?</a>
                         </div>
                         <div class="form__group auth__btn-group">
-                            <button class="btn btn--primary auth__btn form__submit-btn">Sign In</button>
+                            <button class="btn btn--primary auth__btn form__submit-btn">Đăng nhập</button>
                             <button class="btn btn--outline auth__btn btn--no-margin">
                                 <img src="./assets/icons/google.svg" alt="" class="btn__icon icon" />
-                                Sign in with Google
+                                Đăng nhập Google
                             </button>
                         </div>
                     </form>
 
                     <p class="auth__text">
-                        Don’t have an account yet?
+                        Bạn chưa có tài khoản
                         <a href="./sign-up.html" class="auth__link auth__text-link">Sign Up</a>
                     </p>
                 </div>

@@ -12,6 +12,7 @@
 
                 <!-- Profile content -->
                 <div class="profile-container">
+
                     <div class="row gy-md-3">
                         <div class="col-3 col-xl-4 col-lg-5 col-md-12">
                             <aside class="profile__sidebar">
@@ -19,19 +20,19 @@
                                 <div class="profile-user">
                                     <img src="./assets/img/avatar/avatar-3.png" alt="" class="profile-user__avatar" />
                                     <h1 class="profile-user__name">Imran Khan</h1>
-                                    <p class="profile-user__desc">Registered: 17th May 2022</p>
+                                    <p class="profile-user__desc">đăng kí: 17/05/2005</p>
                                 </div>
 
                                 <!-- Menu 1 -->
                                 <div class="profile-menu">
-                                    <h3 class="profile-menu__title">Manage Account</h3>
+                                    <h3 class="profile-menu__title">Quản lí tài khoản </h3>
                                     <ul class="profile-menu__list">
                                         <li>
                                             <a href="./edit-personal-info.html" class="profile-menu__link">
                                                 <span class="profile-menu__icon">
                                                     <img src="./assets/icons/profile.svg" alt="" class="icon" />
                                                 </span>
-                                                Personal info
+                                                Thông tin cá nhân
                                             </a>
                                         </li>
                                         <li>
@@ -39,7 +40,7 @@
                                                 <span class="profile-menu__icon">
                                                     <img src="./assets/icons/location.svg" alt="" class="icon" />
                                                 </span>
-                                                Addresses
+                                                Địa chỉ
                                             </a>
                                         </li>
                                         <li>
@@ -47,7 +48,7 @@
                                                 <span class="profile-menu__icon">
                                                     <img src="./assets/icons/message-2.svg" alt="" class="icon" />
                                                 </span>
-                                                Communications & privacy
+                                                Quyền riêng tư
                                             </a>
                                         </li>
                                     </ul>
@@ -55,14 +56,14 @@
 
                                 <!-- Menu 2 -->
                                 <div class="profile-menu">
-                                    <h3 class="profile-menu__title">My items</h3>
+                                    <h3 class="profile-menu__title">Sản phẩm của tôi</h3>
                                     <ul class="profile-menu__list">
                                         <li>
                                             <a href="#!" class="profile-menu__link">
                                                 <span class="profile-menu__icon">
                                                     <img src="./assets/icons/download.svg" alt="" class="icon" />
                                                 </span>
-                                                Reorder
+                                                Sắp xếp lại
                                             </a>
                                         </li>
                                         <li>
@@ -70,7 +71,7 @@
                                                 <span class="profile-menu__icon">
                                                     <img src="./assets/icons/heart.svg" alt="" class="icon" />
                                                 </span>
-                                                Lists
+                                                Danh sách
                                             </a>
                                         </li>
                                         <li>
@@ -78,7 +79,7 @@
                                                 <span class="profile-menu__icon">
                                                     <img src="./assets/icons/gift-2.svg" alt="" class="icon" />
                                                 </span>
-                                                Registries
+                                                Đăng kí
                                             </a>
                                         </li>
                                     </ul>
@@ -86,14 +87,14 @@
 
                                 <!-- Menu 3 -->
                                 <div class="profile-menu">
-                                    <h3 class="profile-menu__title">Subscriptions & plans</h3>
+                                    <h3 class="profile-menu__title">Đăng kí và kế hoạch</h3>
                                     <ul class="profile-menu__list">
                                         <li>
                                             <a href="#!" class="profile-menu__link">
                                                 <span class="profile-menu__icon">
                                                     <img src="./assets/icons/shield.svg" alt="" class="icon" />
                                                 </span>
-                                                Protection plans
+                                                Kế hoạch bảo vệ
                                             </a>
                                         </li>
                                     </ul>
@@ -101,14 +102,14 @@
 
                                 <!-- Menu 4 -->
                                 <div class="profile-menu">
-                                    <h3 class="profile-menu__title">Customer Service</h3>
+                                    <h3 class="profile-menu__title">Dịch vụ khách hàng</h3>
                                     <ul class="profile-menu__list">
                                         <li>
                                             <a href="#!" class="profile-menu__link">
                                                 <span class="profile-menu__icon">
                                                     <img src="./assets/icons/info.svg" alt="" class="icon" />
                                                 </span>
-                                                Help
+                                                Hỗ trợ
                                             </a>
                                         </li>
                                         <li>
@@ -116,7 +117,7 @@
                                                 <span class="profile-menu__icon">
                                                     <img src="./assets/icons/danger.svg" alt="" class="icon" />
                                                 </span>
-                                                Terms of Use
+                                                Điều khoản sử dụng
                                             </a>
                                         </li>
                                     </ul>
@@ -126,10 +127,10 @@
                         <div class="col-9 col-xl-8 col-lg-7 col-md-12">
                             <div class="cart-info">
                                 <div class="row gy-3">
-                                    <!-- My Wallet -->
+                                    <!-- Ví của tôi -->
                                     <div class="col-12">
-                                        <h2 class="cart-info__heading">My Wallet</h2>
-                                        <p class="cart-info__desc profile__desc">Payment methods</p>
+                                        <h2 class="cart-info__heading">Ví của tôi</h2>
+                                        <p class="cart-info__desc profile__desc">Phương thức thanh toán</p>
 
                                         <div class="row gy-md-2 row-cols-3 row-cols-xl-2 row-cols-lg-1">
                                             <!-- Payment card 1 -->
@@ -142,16 +143,16 @@
                                                     />
                                                     <div class="payment-card__top">
                                                         <img src="./assets/img/card/plane.svg" alt="" />
-                                                        <span class="payment-card__type">FeatherCard</span>
+                                                        <span class="payment-card__type">Teckcombank</span>
                                                     </div>
                                                     <div class="payment-card__number">1234 4567 8901 2221</div>
                                                     <div class="payment-card__bottom">
                                                         <div>
-                                                            <p class="payment-card__label">Card Holder</p>
+                                                            <p class="payment-card__label">Tên chủ thẻ</p>
                                                             <p class="payment-card__value">Imran Khan</p>
                                                         </div>
                                                         <div class="payment-card__expired">
-                                                            <p class="payment-card__label">Expired</p>
+                                                            <p class="payment-card__label">Hết hạn</p>
                                                             <p class="payment-card__value">10/22</p>
                                                         </div>
                                                         <div class="payment-card__circle"></div>
@@ -159,32 +160,7 @@
                                                 </article>
                                             </div>
 
-                                            <!-- Payment card 2 -->
-                                            <div class="col">
-                                                <article class="payment-card" style="--bg-color: #354151">
-                                                    <img
-                                                        src="./assets/img/card/leaf-bg.svg"
-                                                        alt=""
-                                                        class="payment-card__img"
-                                                    />
-                                                    <div class="payment-card__top">
-                                                        <img src="./assets/img/card/leaf.svg" alt="" />
-                                                        <span class="payment-card__type">FeatherCard</span>
-                                                    </div>
-                                                    <div class="payment-card__number">1234 4567 2221 8901</div>
-                                                    <div class="payment-card__bottom">
-                                                        <div>
-                                                            <p class="payment-card__label">Card Holder</p>
-                                                            <p class="payment-card__value">Imran Khan</p>
-                                                        </div>
-                                                        <div class="payment-card__expired">
-                                                            <p class="payment-card__label">Expired</p>
-                                                            <p class="payment-card__value">11/22</p>
-                                                        </div>
-                                                        <div class="payment-card__circle"></div>
-                                                    </div>
-                                                </article>
-                                            </div>
+                                            
 
                                             <!-- Add new payment card -->
                                             <div class="col">
@@ -194,20 +170,20 @@
                                                         alt=""
                                                         class="new-card__icon icon"
                                                     />
-                                                    <p class="new-card__text">Add New Card</p>
+                                                    <p class="new-card__text">THêm thẻ mới</p>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <!-- Account info -->
+                                    <!-- Thông tin tài khoản -->
                                     <div class="col-12">
-                                        <h2 class="cart-info__heading">Account info</h2>
+                                        <h2 class="cart-info__heading">Thông tin tài khoản</h2>
                                         <p class="cart-info__desc profile__desc">
-                                            Addresses, contact information and password
+                                        Địa chỉ, thông tin liên lạc và mật khẩu
                                         </p>
                                         <div class="row gy-md-2 row-cols-2 row-cols-lg-1">
-                                            <!-- Account info 1 -->
+                                            <!-- Thông tin tài khoản 1 -->
                                             <div class="col">
                                                 <a href="./edit-personal-info.html">
                                                     <article class="account-info">
@@ -215,14 +191,14 @@
                                                             <img src="./assets/icons/message.svg" alt="" class="icon" />
                                                         </div>
                                                         <div>
-                                                            <h3 class="account-info__title">Email Address</h3>
+                                                            <h3 class="account-info__title">Địa chỉ email</h3>
                                                             <p class="account-info__desc">tarek97.ta@gmail.com</p>
                                                         </div>
                                                     </article>
                                                 </a>
                                             </div>
 
-                                            <!-- Account info 2 -->
+                                            <!-- Thông tin tài khoản 2 -->
                                             <div class="col">
                                                 <a href="./edit-personal-info.html">
                                                     <article class="account-info">
@@ -230,14 +206,14 @@
                                                             <img src="./assets/icons/calling.svg" alt="" class="icon" />
                                                         </div>
                                                         <div>
-                                                            <h3 class="account-info__title">Phone number</h3>
+                                                            <h3 class="account-info__title">Số điện thoại</h3>
                                                             <p class="account-info__desc">+000 11122 2345 657</p>
                                                         </div>
                                                     </article>
                                                 </a>
                                             </div>
 
-                                            <!-- Account info 3 -->
+                                            <!-- Thông tin tài khoản 3 -->
                                             <div class="col">
                                                 <a href="./edit-personal-info.html">
                                                     <article class="account-info">
@@ -249,7 +225,7 @@
                                                             />
                                                         </div>
                                                         <div>
-                                                            <h3 class="account-info__title">Add an address</h3>
+                                                            <h3 class="account-info__title">Thêm địa chỉ</h3>
                                                             <p class="account-info__desc">
                                                                 Bangladesh Embassy, Washington, DC 20008
                                                             </p>
@@ -261,7 +237,7 @@
                                     </div>
 
                                     <div class="col-12">
-                                        <h2 class="cart-info__heading">Lists</h2>
+                                        <h2 class="cart-info__heading">Danh sách</h2>
                                         <p class="cart-info__desc profile__desc">2 items - Primary</p>
 
                                         <!-- Favourite item 1 -->
@@ -317,7 +293,7 @@
         <!-- Modal: confirm remove shopping cart item -->
         <div id="delete-confirm" class="modal modal--small hide">
             <div class="modal__content">
-                <p class="modal__text">Do you want to remove this item from shopping cart?</p>
+                <p class="modal__text">Bạn có muốn xóa mặt hàng này khỏi giỏ hàng không?</p>
                 <div class="modal__bottom">
                     <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">
                         Cancel
@@ -326,7 +302,7 @@
                         class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin js-toggle"
                         toggle-target="#delete-confirm"
                     >
-                        Delete
+                        Xóa
                     </button>
                 </div>
             </div>
