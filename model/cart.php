@@ -61,8 +61,8 @@
     }
 
 // Change status
-    function buySuccess() {
-        $sql = "insert INTO `orders`(`userID`, `orderDate`, `totalAmount`, `isCompleted`, `paymentMethod`, `shippingAddress`) VALUES ('[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]')";
+    function buySuccess($id, $date, $total, $is, $payment, $address) {
+        $sql = "insert INTO `orders`(`userID`, `orderDate`, `totalAmount`, `isCompleted`, `paymentMethod`, `shippingAddress`) VALUES (".$id.", ".$date.", ".$total.", ".$is.", ".$payment.", ".$address.")";
         pdo_execute($sql);
     }
 ?>

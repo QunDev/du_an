@@ -5,7 +5,7 @@ delivery.forEach((ev) => {
         console.log(ev.getAttribute("data-paymentMethod"));
         switch (ev.getAttribute("data-paymentMethod")) {
             case "cash":
-                form.setAttribute("action", `./?act=buySuccess`);
+                form.setAttribute("action", `./?act=buySuccess&paymentMethod=cash`);
                 form.setAttribute("target", "_self");
                 break;
             case "momo":
