@@ -92,12 +92,17 @@
                 }
                 $unitPrice = $_GET["price"];
                 addProductToOrder($user, $productId, 1, $unitPrice, date("l jS \of F Y h:i:s A"));
+                if(isset($_SESSION["email"])) {
+                    $user = $_SESSION["email"];
+                    $dataOrderDetial = getOrder($user);
+                    include "./view/checkout.php";
+                }
+                break;
             case 'checkout':
                 if(isset($_SESSION["email"])) {
                     $user = $_SESSION["email"];
                     $dataOrderDetial = getOrder($user);
                     include "./view/checkout.php";
-                    
                 }
                 break;
             case 'prev':
