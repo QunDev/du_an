@@ -60,9 +60,10 @@
         return pdo_query_one($sql);
     }
 
-// Change status
-    function buySuccess($id, $date, $total, $is, $payment, $address) {
-        $sql = "insert INTO `orders`(`userID`, `orderDate`, `totalAmount`, `isCompleted`, `paymentMethod`, `shippingAddress`) VALUES (".$id.", ".$date.", ".$total.", ".$is.", ".$payment.", ".$address.")";
+// Thêm sản phẩm đã thanh toán
+    function buySuccess($proId, $userId, $date, $complete, $pay, $address, $total, $quantity) {
+        $sql = "insert INTO `buy`(`productId`, `userId`, `buyDate`, `isCompleted`, `paymentMethod`, `shippingAddress`, `totalAmount`, `quantityProduct`) 
+                    VALUES ('".$proId."','".$userId."','".$date."','".$complete."','".$pay."','".$address."','".$total."','".$quantity."')";
         pdo_execute($sql);
     }
 ?>

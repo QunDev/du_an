@@ -11,6 +11,7 @@
     $quantity = countProduct();
     $countOrders = countOrder();
     $dataAddress = getShippingAddress();
+    $dataProducts = getProducts();
     
     if(isset($_SESSION["email"])) {
         $dataUser = getUserByEmail($_SESSION["email"]);
@@ -80,7 +81,7 @@
                 $user = $_GET["userId"];
                 $productId = $_GET["id"];
                 $unitPrice = $_GET["price"];
-                if(isset($_SESSION["email"]) || isset($_COOKIE["email"])) {
+                if(isset($_SESSION["email"])) {
                     foreach ($dataOrderDetial as $data) {
                         extract($data);
                         if($productId == $productID) {
@@ -97,6 +98,8 @@
                     $dataOrderDetial = getOrder($user);
                     include "./view/checkout.php";
                 }
+                $dataOrderDetial = getOrder($user);
+                include "./view/checkout.php";
                 break;
             case 'checkout':
                 if(isset($_SESSION["email"])) {
@@ -148,20 +151,27 @@
                 include "./view/payment.php";
                 break;
             case 'buySuccess':
-                echo $_POST["userId"];
-                buySuccess($_POST["userId"], date("l jS \of F Y h:i:s A"), $_POST["price"], $_POST["status"], $_GET["paymentMethod"], $_POST["address"]);
+                if(isset($_SESSION["email"])) {
+                    $pay = $_GET["paymentMethod"];
+                    $address = $_GET["address"];
+                    foreach (getOrder($_SESSION["email"]) as $value) {
+                        extract($value);
+
+                        buySuccess($productID, $userId, date("l jS \of F Y h:i:s A"), "Đợi xác nhận", $pay, $address, $unitPrice + 3, $quantity);
+                    }
+                }
+                
                 break;
             case 'profile':
                 $dataProduct = getOrder($_GET["id"]);
                 include "./view/profile.php";
                 break;
             default:
-                $dataProducts = getProducts();
+                
                 include "./view/home.php";
                 break;
         }
     } else {
-        $dataProducts = getProducts();
         include "./view/home.php";
     }
     
