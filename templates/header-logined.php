@@ -126,7 +126,7 @@
                             <img src="./assets/icons/arrow-up.png" alt="" class="act-dropdown__arrow" />
                             <div class="act-dropdown__top">
                                 <h2 class="act-dropdown__title">You have 3 item(s)</h2>
-                                <a href="./?act=checkout" class="act-dropdown__view-all">See All</a>
+                                <a href="./?act=checkout" class="act-dropdown__view-all">Xem tất cả</a>
                             </div>
                             <div class="row row-cols-3 gx-2 act-dropdown__list">
                                 <!-- Cart preview item 1 -->
@@ -167,26 +167,26 @@
                             </div>
                             <div class="act-dropdown__bottom">
                                 <div class="act-dropdown__row">
-                                    <span class="act-dropdown__label">Subtotal</span>
+                                    <span class="act-dropdown__label">Tổng</span>
                                     <span class="act-dropdown__value">$415.99</span>
                                 </div>
                                 <div class="act-dropdown__row">
                                     <span class="act-dropdown__label">Texes</span>
-                                    <span class="act-dropdown__value">Free</span>
+                                    <span class="act-dropdown__value">miễn phí</span>
                                 </div>
                                 <div class="act-dropdown__row">
-                                    <span class="act-dropdown__label">Shipping</span>
+                                    <span class="act-dropdown__label">Giao hàng</span>
                                     <span class="act-dropdown__value">$10.00</span>
                                 </div>
                                 <div class="act-dropdown__row act-dropdown__row--bold">
-                                    <span class="act-dropdown__label">Total Price</span>
+                                    <span class="act-dropdown__label">Tổng giá</span>
                                     <span class="act-dropdown__value">$425.99</span>
                                 </div>
                             </div>
                             <div class="act-dropdown__checkout">
                                 <a href="./?act=checkout"
                                     class="btn btn--primary btn--rounded act-dropdown__checkout-btn">
-                                    Check Out All
+                                    Kiểm tra tất cả
                                 </a>
                             </div>
                         </div>
@@ -213,10 +213,10 @@
 
                         <ul class="user-menu__list">
                             <li>
-                                <a href="./profile.html" class="user-menu__link">Profile</a>
+                                <a href="./profile.html" class="user-menu__link">cá nhân</a>
                             </li>
                             <li>
-                                <a href="./favourite.html" class="user-menu__link">Favourite list</a>
+                                <a href="./favourite.html" class="user-menu__link">Yêu thích list</a>
                             </li>
                             <li class="user-menu__separate">
                                 <a href="#!" class="user-menu__link" id="switch-theme-btn">
@@ -225,10 +225,10 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#!" class="user-menu__link">Settings</a>
+                                <a href="#!" class="user-menu__link">Cài đặt </a>
                             </li>
                             <li class="user-menu__separate">
-                                <a href="./sign-in.html" class="user-menu__link">Logout</a>
+                                <a href="./sign-in.html" class="user-menu__link">Thoát</a>
                             </li>
                         </ul>
                     </div>
