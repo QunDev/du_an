@@ -7,7 +7,7 @@
         <!-- Browse Categories -->
         <section class="home__container">
             <div class="home__row">
-                <h2 class="home__heading">Browse Categories</h2>
+                <h2 class="home__heading">Duyệt danh mục</h2>
             </div>
             <div class="home__cate row row-cols-3 row-cols-md-1">
                 <!-- Category item 1 -->
@@ -35,35 +35,35 @@
         <!-- Browse Products -->
         <section class="home__container">
             <div class="home__row">
-                <h2 class="home__heading">Total LavAzza <?php echo $quantity ?></h2>
+                <h2 class="home__heading">Tổng LavAzza <?php echo $quantity ?></h2>
                 <div class="filter-wrap">
                     <button class="filter-btn js-toggle" toggle-target="#home-filter">
-                        Filter
+                        Lọc
                         <img src="./assets/icons/filter.svg" alt="" class="filter-btn__icon icon" />
                     </button>
 
                     <div id="home-filter" class="filter hide">
                         <img src="./assets/icons/arrow-up.png" alt="" class="filter__arrow" />
-                        <h3 class="filter__heading">Filter</h3>
+                        <h3 class="filter__heading">Lọc</h3>
                         <form action="" class="filter__form form">
                             <div class="filter__row filter__content">
                                 <!-- Filter column 1 -->
                                 <div class="filter__col">
-                                    <label for="" class="form__label">Price</label>
+                                    <label for="" class="form__label">Giá</label>
                                     <div class="filter__form-group">
                                         <div class="filter__form-slider" style="--min-value: 10%; --max-value: 60%">
                                         </div>
                                     </div>
                                     <div class="filter__form-group filter__form-group--inline">
                                         <div>
-                                            <label for="" class="form__label form__label--small"> Minimum </label>
+                                            <label for="" class="form__label form__label--small"> Nhỏ nhất </label>
                                             <div class="filter__form-text-input filter__form-text-input--small">
                                                 <input type="text" name="" id="" class="filter__form-input"
                                                     value="$30.00" />
                                             </div>
                                         </div>
                                         <div>
-                                            <label for="" class="form__label form__label--small"> Maximum </label>
+                                            <label for="" class="form__label form__label--small"> Lớn nhất </label>
                                             <div class="filter__form-text-input filter__form-text-input--small">
                                                 <input type="text" name="" id="" class="filter__form-input"
                                                     value="$100.00" />
@@ -76,7 +76,7 @@
 
                                 <!-- Filter column 2 -->
                                 <div class="filter__col">
-                                    <label for="" class="form__label">Size/Weight</label>
+                                    <label for="" class="form__label">cỡ</label>
                                     <div class="filter__form-group">
                                         <div class="form__select-wrap">
                                             <div class="form__select" style="--width: 158px">
@@ -93,9 +93,9 @@
                                     </div>
                                     <div class="filter__form-group">
                                         <div class="form__tags">
-                                            <button class="form__tag">Small</button>
-                                            <button class="form__tag">Medium</button>
-                                            <button class="form__tag">Large</button>
+                                            <button class="form__tag">nhỏ</button>
+                                            <button class="form__tag">vừa</button>
+                                            <button class="form__tag">Lớn</button>
                                         </div>
                                     </div>
                                 </div>
@@ -104,7 +104,7 @@
 
                                 <!-- Filter column 3 -->
                                 <div class="filter__col">
-                                    <label for="" class="form__label">Brand</label>
+                                    <label for="" class="form__label">Thuqong hiệu</label>
                                     <div class="filter__form-group">
                                         <div class="filter__form-text-input">
                                             <input type="text" name="searchName" id="searchName" placeholder="Search brand name"
@@ -129,10 +129,10 @@
                             </div>
                             <div class="filter__row filter__footer">
                                 <button class="btn btn--text filter__cancel js-toggle" toggle-target="#home-filter">
-                                    Cancel
+                                    Trở lại
                                 </button>
                                 <button class="btn btn--primary filter__submit js-toggle" toggle-target="#home-filter">
-                                    Show Result
+                                Kết quả cho thấy
                                 </button>
                             </div>
                         </form>

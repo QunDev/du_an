@@ -20,7 +20,7 @@
                                 <div class="profile-user">
                                     <img src="./assets/img/avatar/avatar-3.png" alt="" class="profile-user__avatar" />
                                     <h1 class="profile-user__name">Imran Khan</h1>
-                                    <p class="profile-user__desc">đăng kí: 17/05/2005</p>
+                                    <p class="profile-user__desc">đăng kí : 17/05/2005</p>
                                 </div>
 
                                 <!-- Menu 1 -->

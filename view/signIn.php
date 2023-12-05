@@ -17,7 +17,7 @@
                     </a>
                     <h1 class="auth__heading">Xin chào</h1>
                     <p class="auth__desc">
-                        chào mừng đến grocerymart
+                         chào mừng đến grocerymart
                     </p>
                     <form action="./?act=checkAccount" class="form auth__form" method="post">
                         <div class="form__group">

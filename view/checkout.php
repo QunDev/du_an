@@ -20,12 +20,12 @@
                     <ul class="breadcrumbs checkout-page__breadcrumbs">
                         <li>
                             <a href="./" class="breadcrumbs__link">
-                                Home
+                                Trang chủ
                                 <img src="./assets/icons/arrow-right.svg" alt="" />
                             </a>
                         </li>
                         <li>
-                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Checkout</a>
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Kiểm tra</a>
                         </li>
                     </ul>
                 </div>
@@ -121,24 +121,24 @@
                                                         src="./assets/icons/arrow-down-2.svg"
                                                         alt=""
                                                     />
-                                                    Continue Shopping
+                                                    Tiếp tục giao hàng
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="col-4 col-xxl-5">
                                             <div class="cart-info__row">
-                                                <span>Subtotal:</span>
+                                                <span>Tổng:</span>
                                                 <span>$<?php
                                                     echo $subTotal;
                                                 ?></span>
                                             </div>
                                             <div class="cart-info__row">
-                                                <span>Shipping:</span>
+                                                <span>Giao hàng:</span>
                                                 <span>$3</span>
                                             </div>
                                             <div class="cart-info__separate"></div>
                                             <div class="cart-info__row cart-info__row--bold">
-                                                <span>Total:</span>
+                                                <span>Tổng:</span>
                                                 <span>$<?php
                                                     echo $subTotal + 3;
                                                 ?></span>
@@ -151,11 +151,11 @@
                         <div class="col-4 col-xl-12">
                             <div class="cart-info">
                                 <div class="cart-info__row">
-                                    <span>Subtotal <span class="cart-info__sub-label">(items)</span></span>
+                                    <span>Tổng <span class="cart-info__sub-label">(Sản phẩm )</span></span>
                                     <span><?php echo $countOrders; ?></span>
                                 </div>
                                 <div class="cart-info__row">
-                                    <span>Price <span class="cart-info__sub-label">(Total)</span></span>
+                                    <span>Giá <span class="cart-info__sub-label">(Tổng)</span></span>
                                     <span>$
                                         <?php
                                             echo $subTotal + 3;
@@ -164,7 +164,7 @@
                                 </div>
                                 <div class="cart-info__separate"></div>
                                 <div class="cart-info__row">
-                                    <span>Estimated Total</span>
+                                    <span>Tổng số ước tính</span>
                                     <span>$
                                         <?php
                                             echo $subTotal + 3;
@@ -172,7 +172,7 @@
                                     </span>
                                 </div>
                                 <a href="./?act=shipping" class="cart-info__next-btn btn btn--primary btn--rounded" id="nextURL" data-count="<?php echo $countOrders; ?>">
-                                    Continue to checkout
+                                    Tiếp tục kiểm tra
                                 </a>
                             </div>
                             <div class="cart-info">
@@ -182,9 +182,9 @@
                                             <img src="./assets/icons/gift.svg" alt="" class="gift-item__icon" />
                                         </div>
                                         <div class="gift-item__content">
-                                            <h3 class="gift-item__title">Send this order as a gift.</h3>
+                                            <h3 class="gift-item__title">Gửi quà cho bạn.</h3>
                                             <p class="gift-item__desc">
-                                                Available items will be shipped to your gift recipient.
+                                                Gửi quà.
                                             </p>
                                         </div>
                                     </article>
@@ -205,10 +205,10 @@
         <!-- Modal: confirm remove shopping cart item -->
         <div id="delete-confirm" class="modal modal--small hide">
             <div class="modal__content">
-                <p class="modal__text">Do you want to remove this item from shopping cart?</p>
+                <p class="modal__text">Bạn muốn mua với thẻ không?</p>
                 <div class="modal__bottom">
                     <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">
-                        Cancel
+                        Trở lại
                     </button>
                     <button
                         class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin js-toggle"
@@ -216,7 +216,7 @@
                         id="delete"
                         type="button"
                     >
-                        Delete
+                        Xóa
                     </button>
                 </div>
             </div>

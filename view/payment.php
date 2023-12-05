@@ -18,24 +18,24 @@
                     <ul class="breadcrumbs checkout-page__breadcrumbs">
                         <li>
                             <a href="./" class="breadcrumbs__link">
-                                Home
+                                Trang chủ
                                 <img src="./assets/icons/arrow-right.svg" alt="" />
                             </a>
                         </li>
                         <li>
                             <a href="./?act=checkout" class="breadcrumbs__link">
-                                Checkout
+                                Kiểm tra
                                 <img src="./assets/icons/arrow-right.svg" alt="" />
                             </a>
                         </li>
                         <li>
                             <a href="./?act=shipping" class="breadcrumbs__link">
-                                Shipping
+                                Giao hàng
                                 <img src="./assets/icons/arrow-right.svg" alt="" />
                             </a>
                         </li>
                         <li>
-                            <a href="./?act=payment" class="breadcrumbs__link breadcrumbs__link--current">Payment method</a>
+                            <a href="./?act=payment" class="breadcrumbs__link breadcrumbs__link--current">Phương thức thanh toán </a>
                         </li>
                     </ul>
                 </div>
@@ -47,7 +47,7 @@
                             <div class="cart-info">
                                 <div class="cart-info__top">
                                     <h2 class="cart-info__heading cart-info__heading--lv2">
-                                        1. Shipping, arrives between Mon, May 16—Tue, May 24
+                                        1. Giao hàng, arrives between Mon, May 16—Tue, May 24
                                     </h2>
                                 </div>
 
@@ -69,9 +69,9 @@
                             </div>
 
                             <div class="cart-info">
-                                <h2 class="cart-info__heading cart-info__heading--lv2">2. Shipping method</h2>
+                                <h2 class="cart-info__heading cart-info__heading--lv2">2. Phương thức giao hàng</h2>
                                 <div class="cart-info__separate"></div>
-                                <h3 class="cart-info__sub-heading">Availeble Shipping method</h3>
+                                <h3 class="cart-info__sub-heading">Phương thức vận chuyển có sẵn</h3>
 
                                 <!-- Payment item 3 -->
                                 <label>
@@ -85,7 +85,7 @@
                                             <div class="payment-item__info">
                                                 <h3 class="payment-item__title">Fedex Delivery</h3>
                                                 <p class="payment-item__desc payment-item__desc--low">
-                                                2-3 days work
+                                                2-3 công việc trong ngày
                                                 </p>
                                             </div>
 
@@ -115,7 +115,7 @@
                                             <div class="payment-item__info">
                                                 <h3 class="payment-item__title">DHL Delivery</h3>
                                                 <p class="payment-item__desc payment-item__desc--low">
-                                                    Delivery: 2-3 days work
+                                                    Delivery: 2-3 Công việc trong ngày
                                                 </p>
                                             </div>
 
@@ -126,7 +126,7 @@
                                                     class="cart-info__checkbox-input payment-item__checkbox-input"
                                                     data-delivery="free"
                                                 />
-                                                <span class="payment-item__cost">Free</span>
+                                                <span class="payment-item__cost">Miễn phí</span>
                                             </span>
                                         </div>
                                     </article>
@@ -136,9 +136,9 @@
                             <!--  -->
 
                             <div class="cart-info">
-                                <h2 class="cart-info__heading cart-info__heading--lv2">2. Payment method</h2>
+                                <h2 class="cart-info__heading cart-info__heading--lv2">2. Phương thức thanh toán </h2>
                                 <div class="cart-info__separate"></div>
-                                <h3 class="cart-info__sub-heading">Payment method</h3>
+                                <h3 class="cart-info__sub-heading"> Phương thức thanh toán</h3>
 
                                 <!-- Payment item 3 -->
                                 <label>
@@ -175,7 +175,7 @@
                                         />
                                         <div class="payment-item__content">
                                             <div class="payment-item__info">
-                                                <h3 class="payment-item__title">Cash</h3>
+                                                <h3 class="payment-item__title">Thẻ</h3>
                                             </div>
 
                                             <span class="cart-info__checkbox payment-item__checkbox">
@@ -193,19 +193,19 @@
                         </div>
                         <div class="col-4 col-xl-4 col-lg-12">
                             <div class="cart-info">
-                                <h2 class="cart-info__heading cart-info__heading--lv2">Payment Details</h2>
+                                <h2 class="cart-info__heading cart-info__heading--lv2">Chi tiết thanh toán</h2>
                                 <p class="cart-info__desc">
-                                    Complete your purchase item by providing your payment details order.
+                                Hoàn thành mặt hàng mua hàng của bạn bằng cách cung cấp đơn đặt hàng chi tiết thanh toán của bạn.
                                 </p>
                                 
                                 <form id="form-submit" class="cart-info" method="POST" target="_blank" enctype="application/x-www-form-urlencoded" action="./view/handle_payment.php" data-user="<?php echo $_SESSION["email"] ?>">
                                     <div class="cart-info__row">
-                                        <span>Subtotal <label class="cart-info__sub-label">(items)</label></span>
+                                        <span>Tổng <label class="cart-info__sub-label">(Sản phẩm )</label></span>
                                         <span><?php echo $countOrders; ?></span>
                                         
                                     </div>
                                     <div class="cart-info__row">
-                                        <span>Price <span class="cart-info__sub-label">(Total)</span></span>
+                                        <span>Price <span class="cart-info__sub-label">(Tổng)</span></span>
                                         <span>$
                                         <?php
                                                 echo $subTotal + 3;
@@ -234,9 +234,9 @@
                                             <img src="./assets/icons/gift.svg" alt="" class="gift-item__icon" />
                                         </div>
                                         <div class="gift-item__content">
-                                            <h3 class="gift-item__title">Send this order as a gift.</h3>
+                                            <h3 class="gift-item__title">Gửi quà cho bạn.</h3>
                                             <p class="gift-item__desc">
-                                                Available items will be shipped to your gift recipient.
+                                                Gửi quà.
                                             </p>
                                         </div>
                                     </article>
@@ -257,16 +257,16 @@
         <!-- Modal: confirm remove shopping cart item -->
         <div id="delete-confirm" class="modal modal--small hide">
             <div class="modal__content">
-                <p class="modal__text">Do you want to remove this item from shopping cart?</p>
+                <p class="modal__text">Bạn muốn mua với thẻ không?</p>
                 <div class="modal__bottom">
                     <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">
-                        Cancel
+                        Trở lại
                     </button>
                     <button
                         class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin js-toggle"
                         toggle-target="#delete-confirm"
                     >
-                        Delete
+                        Xóa
                     </button>
                 </div>
             </div>
@@ -277,11 +277,11 @@
         <div id="add-new-address" class="modal hide" style="--content-width: 650px">
             <div class="modal__content">
                 <form action="" class="form">
-                    <h2 class="modal__heading">Add new shipping address</h2>
+                    <h2 class="modal__heading">Thêm địa chỉ giao hàng</h2>
                     <div class="modal__body">
                         <div class="form__row">
                             <div class="form__group">
-                                <label for="name" class="form__label form__label--small">Name</label>
+                                <label for="name" class="form__label form__label--small">Tên</label>
                                 <div class="form__text-input form__text-input--small">
                                     <input
                                         type="text"
@@ -294,10 +294,10 @@
                                     />
                                     <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                                 </div>
-                                <p class="form__error">Name must be at least 2 characters</p>
+                                <p class="form__error">Tên phải có ít nhất 2 ký tự</p>
                             </div>
                             <div class="form__group">
-                                <label for="phone" class="form__label form__label--small">Phone</label>
+                                <label for="phone" class="form__label form__label--small">SĐT</label>
                                 <div class="form__text-input form__text-input--small">
                                     <input
                                         type="tel"
@@ -310,11 +310,11 @@
                                     />
                                     <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                                 </div>
-                                <p class="form__error">Phone must be at least 10 characters</p>
+                                <p class="form__error">Điện thoại phải có ít nhất 10 ký tự</p>
                             </div>
                         </div>
                         <div class="form__group">
-                            <label for="address" class="form__label form__label--small">Address</label>
+                            <label for="address" class="form__label form__label--small">Thêm</label>
                             <div class="form__text-area">
                                 <textarea
                                     name="address"
@@ -325,7 +325,7 @@
                                 ></textarea>
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                             </div>
-                            <p class="form__error">Address not empty</p>
+                            <p class="form__error">Không được để trống</p>
                         </div>
                         <div class="form__group">
                             <label for="city" class="form__label form__label--small">City/District/Town</label>
@@ -347,7 +347,7 @@
                                         class="form__close-dialog d-none d-sm-block js-toggle"
                                         toggle-target="#city-dialog"
                                     >
-                                        &times
+                                        &thời gian
                                     </button>
                                     <div class="form__search">
                                         <input type="text" placeholder="Search" class="form__search-input" />
@@ -393,20 +393,20 @@
                                     </ul>
                                 </div>
                             </div>
-                            <p class="form__error">Phone must be at least 11 characters</p>
+                            <p class="form__error">Số điện thoại phải có 11 kí tự</p>
                         </div>
                         <div class="form__group form__group--inline">
                             <label class="form__checkbox">
                                 <input type="checkbox" name="" id="" class="form__checkbox-input d-none" />
-                                <span class="form__checkbox-label">Set as default address</span>
+                                <span class="form__checkbox-label">Đặt địa chỉ mặc định</span>
                             </label>
                         </div>
                     </div>
                     <div class="modal__bottom">
                         <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">
-                            Cancel
+                            Trở lại
                         </button>
-                        <button class="btn btn--small btn--primary modal__btn btn--no-margin">Create</button>
+                        <button class="btn btn--small btn--primary modal__btn btn--no-margin">Thêm</button>
                     </div>
                 </form>
             </div>

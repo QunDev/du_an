@@ -24,7 +24,7 @@
         <!-- Browse Categories -->
         <section class="home__container">
             <div class="home__row">
-                <h2 class="home__heading">Browse Categories</h2>
+                <h2 class="home__heading">Duyệt danh mục</h2>
             </div>
             <div class="home__cate row row-cols-3 row-cols-md-1">
                 <!-- Category item 1 -->
@@ -52,10 +52,10 @@
         <!-- Browse Products -->
         <section class="home__container">
             <div class="home__row">
-                <h2 class="home__heading">Total LavAzza <?php echo $quantity ?></h2>
+                <h2 class="home__heading">ttorng LavAzza <?php echo $quantity ?></h2>
                 <div class="filter-wrap">
                     <button class="filter-btn js-toggle" toggle-target="#home-filter">
-                        Filter
+                        Lọc
                         <img src="./assets/icons/filter.svg" alt="" class="filter-btn__icon icon" />
                     </button>
 
@@ -110,9 +110,9 @@
                                     </div>
                                     <div class="filter__form-group">
                                         <div class="form__tags">
-                                            <button class="form__tag">Small</button>
-                                            <button class="form__tag">Medium</button>
-                                            <button class="form__tag">Large</button>
+                                            <button class="form__tag">nhỏ</button>
+                                            <button class="form__tag">vừa</button>
+                                            <button class="form__tag">Lớn</button>
                                         </div>
                                     </div>
                                 </div>
@@ -121,7 +121,7 @@
 
                                 <!-- Filter column 3 -->
                                 <div class="filter__col">
-                                    <label for="" class="form__label">Brand</label>
+                                    <label for="" class="form__label">Thương hiệu</label>
                                     <div class="filter__form-group">
                                         <div class="filter__form-text-input">
                                             <input type="text" name="searchName" id="searchName" placeholder="Search brand name"
@@ -146,7 +146,7 @@
                             </div>
                             <div class="filter__row filter__footer">
                                 <button class="btn btn--text filter__cancel js-toggle" toggle-target="#home-filter">
-                                    Cancel
+                                    Trở lại
                                 </button>
                                 <button class="btn btn--primary filter__submit js-toggle" toggle-target="#home-filter">
                                     Show Result

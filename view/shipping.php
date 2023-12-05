@@ -167,7 +167,7 @@
                                                                     </button>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                         </div>
                                                         <div class="cart-item__content-right">
                                                             <p class="cart-item__total-price">$'.$unitPrice * $quantity.'</p>
                                                             <div class="cart-item__ctrl">

@@ -103,9 +103,9 @@
                                         <div class="col-5 col-xxl-6 col-xl-12">
                                             <div class="prod-prop">
                                                 <img src="./assets/icons/star.svg" alt="" class="prod-prop__icon" />
-                                                <h4 class="prod-prop__title">(3.5) 1100 reviews</h4>
+                                                <h4 class="prod-prop__title">(3.5) 1100 Lượt xem</h4>
                                             </div>
-                                            <label for="" class="form__label prod-info__label">Size/Weight</label>
+                                            <label for="" class="form__label prod-info__label">Kích thước/Trọng lượng</label>
                                             <div class="filter__form-group">
                                                 <div class="form__select-wrap">
                                                     <div class="form__select" style="--width: 146px">
@@ -128,9 +128,9 @@
                                             </div>
                                             <div class="filter__form-group">
                                                 <div class="form__tags">
-                                                    <button class="form__tag prod-info__tag">Small</button>
-                                                    <button class="form__tag prod-info__tag">Medium</button>
-                                                    <button class="form__tag prod-info__tag">Large</button>
+                                                    <button class="form__tag prod-info__tag">nhỏ</button>
+                                                    <button class="form__tag prod-info__tag">Trung bình</button>
+                                                    <button class="form__tag prod-info__tag">Lớn</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -142,7 +142,7 @@
                                                         alt=""
                                                         class="prod-prop__icon icon"
                                                     />
-                                                    <h4 class="prod-prop__title">Compare</h4>
+                                                    <h4 class="prod-prop__title">So sánh</h4>
                                                 </div>
                                                 <div class="prod-prop">
                                                     <img
@@ -151,8 +151,8 @@
                                                         class="prod-prop__icon icon"
                                                     />
                                                     <div>
-                                                        <h4 class="prod-prop__title">Delivery</h4>
-                                                        <p class="prod-prop__desc">From $6 for 1-3 days</p>
+                                                        <h4 class="prod-prop__title">Vận chuyển</h4>
+                                                        <p class="prod-prop__desc">Từ 128.000đ </p>
                                                     </div>
                                                 </div>
                                                 <div class="prod-prop">
@@ -163,18 +163,18 @@
                                                     />
                                                     <div>
                                                         <h4 class="prod-prop__title">Pickup</h4>
-                                                        <p class="prod-prop__desc">Out of 2 store, today</p>
+                                                        <p class="prod-prop__desc">trong 2 của hàng, hôm nay</p>
                                                     </div>
                                                 </div>
                                                 <div class="prod-info__card">
                                                     <div class="prod-info__row">
-                                                        <span class="prod-info__price">$<?php echo $price ?></span>
+                                                        <span class="prod-info__price"><?php echo $price ?>đ</span>
                                                         <span class="prod-info__tax">10%</span>
                                                     </div>
-                                                    <p class="prod-info__total-price">$<?php echo $price/100*10 + $price ?></p>
+                                                    <p class="prod-info__total-price"><?php echo $price/100*10 + $price ?>đ</p>
                                                     <div class="prod-info__row">
                                                         <button class="btn btn--primary prod-info__add-to-cart" type="submit">
-                                                            Add to cart
+                                                            THêm vào giỏ hàng 
                                                         </button>
                                                         <button class="like-btn prod-info__like-btn">
                                                             <img
@@ -203,9 +203,9 @@
                 <div class="product-container">
                     <div class="prod-tab js-tabs">
                         <ul class="prod-tab__list">
-                            <li class="prod-tab__item prod-tab__item--current">Description</li>
-                            <li class="prod-tab__item">Review (1100)</li>
-                            <li class="prod-tab__item">Similar</li>
+                            <li class="prod-tab__item prod-tab__item--current">Mô tả</li>
+                            <li class="prod-tab__item">Lượt xem (1100)</li>
+                            <li class="prod-tab__item">Tương tự</li>
                         </ul>
                         <div class="prod-tab__contents">
                             <div class="prod-tab__content prod-tab__content--current">
@@ -307,9 +307,9 @@
                             </div>
                             <div class="prod-tab__content">
                                 <div class="prod-content">
-                                    <h2 class="prod-content__heading">What our customers are saying</h2>
+                                    <h2 class="prod-content__heading">Bình Luận</h2>
                                     <div class="row row-cols-3 gx-lg-2 row-cols-md-1 gy-md-3">
-                                        <!-- Review card 1 -->
+                                        <!-- Lượt xem card 1 -->
                                         <div class="col">
                                             <div class="review-card">
                                                 <div class="review-card__content">
@@ -353,12 +353,12 @@
                                                             class="review-card__star"
                                                         />
                                                     </div>
-                                                    <span class="review-card__rating-title">(3.5) Review</span>
+                                                    <span class="review-card__rating-title">(3.5) Lượt xem</span>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <!-- Review card 2 -->
+                                        <!-- Lượt xem card 2 -->
                                         <div class="col">
                                             <div class="review-card">
                                                 <div class="review-card__content">
@@ -402,12 +402,12 @@
                                                             class="review-card__star"
                                                         />
                                                     </div>
-                                                    <span class="review-card__rating-title">(3.5) Review</span>
+                                                    <span class="review-card__rating-title">(3.5) Lượt xem</span>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <!-- Review card 3 -->
+                                        <!-- Lượt xem card 3 -->
                                         <div class="col">
                                             <div class="review-card">
                                                 <div class="review-card__content">
@@ -419,7 +419,7 @@
                                                     <div class="review-card__info">
                                                         <h4 class="review-card__title">Delwar Hussain</h4>
                                                         <p class="review-card__desc">
-                                                            Great product, I like this Coffee Beans
+                                                            Sản phẩm tuyệt vời, tôi thích Coffee Beans
                                                         </p>
                                                     </div>
                                                 </div>
@@ -451,7 +451,7 @@
                                                             class="review-card__star"
                                                         />
                                                     </div>
-                                                    <span class="review-card__rating-title">(3.5) Review</span>
+                                                    <span class="review-card__rating-title">(3.5) Lượt xem</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -460,7 +460,7 @@
                             </div>
                             <div class="prod-tab__content">
                                 <div class="prod-content">
-                                    <h2 class="prod-content__heading">Similar items you might like</h2>
+                                    <h2 class="prod-content__heading">Các mặt hàng tương tự bạn có thể thích</h2>
                                     <div
                                         class="row row-cols-6 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-2"
                                     >
@@ -495,7 +495,7 @@
                                                 </h3>
                                                 <p class="product-card__brand">Lavazza</p>
                                                 <div class="product-card__row">
-                                                    <span class="product-card__price">$47.00</span>
+                                                    <span class="product-card__price">47.000</span>
                                                     <img
                                                         src="./assets/icons/star.svg"
                                                         alt=""
@@ -537,7 +537,7 @@
                                                 </h3>
                                                 <p class="product-card__brand">Lavazza</p>
                                                 <div class="product-card__row">
-                                                    <span class="product-card__price">$53.00</span>
+                                                    <span class="product-card__price">53.000</span>
                                                     <img
                                                         src="./assets/icons/star.svg"
                                                         alt=""
@@ -579,7 +579,7 @@
                                                 </h3>
                                                 <p class="product-card__brand">Welikecoffee</p>
                                                 <div class="product-card__row">
-                                                    <span class="product-card__price">$99.99</span>
+                                                    <span class="product-card__price">99.990</span>
                                                     <img
                                                         src="./assets/icons/star.svg"
                                                         alt=""
@@ -621,7 +621,7 @@
                                                 </h3>
                                                 <p class="product-card__brand">Lavazza</p>
                                                 <div class="product-card__row">
-                                                    <span class="product-card__price">$38.65</span>
+                                                    <span class="product-card__price">38.650</span>
                                                     <img
                                                         src="./assets/icons/star.svg"
                                                         alt=""
@@ -663,7 +663,7 @@
                                                 </h3>
                                                 <p class="product-card__brand">Lavazza</p>
                                                 <div class="product-card__row">
-                                                    <span class="product-card__price">$47.00</span>
+                                                    <span class="product-card__price">47.000</span>
                                                     <img
                                                         src="./assets/icons/star.svg"
                                                         alt=""
@@ -705,7 +705,7 @@
                                                 </h3>
                                                 <p class="product-card__brand">Lavazza</p>
                                                 <div class="product-card__row">
-                                                    <span class="product-card__price">$53.00</span>
+                                                    <span class="product-card__price">53.000</span>
                                                     <img
                                                         src="./assets/icons/star.svg"
                                                         alt=""
