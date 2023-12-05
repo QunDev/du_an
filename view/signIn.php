@@ -70,7 +70,7 @@
 
                     <p class="auth__text">
                         Bạn chưa có tài khoản
-                        <a href="./sign-up.html" class="auth__link auth__text-link">Sign Up</a>
+                        <a href="./?act=signUp" class="auth__link auth__text-link">Sign Up</a>
                     </p>
                 </div>
             </div>

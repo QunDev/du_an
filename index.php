@@ -12,13 +12,12 @@
     $countOrders = countOrder();
     $dataAddress = getShippingAddress();
     
-
     if(isset($_SESSION["email"])) {
         $dataUser = getUserByEmail($_SESSION["email"]);
         $dataOrderDetial = getOrder($_SESSION["email"]);
         include "./templates/header-logined.php";
     } else {
-        include "./templates/header.php";
+        include "./templates/header-not.php";
     }
     
     if(isset($_GET["act"])) {
@@ -42,19 +41,24 @@
             case 'signUp':
                 include "./view/signUp.php";
                 break;
+            case 'logOut':
+                if(isset($_SESSION["email"])) {
+                    unset($_SESSION["email"]);
+                }
+                header_remove("location");
+                break;
             case 'checkAccount':
                 $email = $_POST["email"];
                 $password = $_POST["password"];
-                if(isset($_POST["checkbox"])) {
-                    $_SESSION["email"] = $email;
-                } else {
-                    setcookie("email", $email, time() + 60, "/");
-                }
                 if(checkSignIn($email, $password)) {
-                    header("location: ./?act=logined");
-                } else {
-                    header("location: ./?act=signIn");
-                }
+                    $_SESSION["email"] = $email;
+                    if(isset($_SESSION["email"])) {
+                        $dataProducts = getProducts();
+                        header("location: ./?act=logined");
+                    } else {
+                        header("location: ./");
+                    }
+                } 
                 break;
             case 'checkSignUp':
                 if(isset($_POST["email"])) {
@@ -67,7 +71,7 @@
             case 'logined':
                 if(isset($_SESSION["email"])) {
                     $dataProducts = getProducts();
-                    include "./view/home-logined.php";
+                    include "./view/home.php";
                 } else {
                     header("location: ./");
                 }

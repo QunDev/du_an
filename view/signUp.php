@@ -90,7 +90,7 @@
 
                     <p class="auth__text">
                         Bạn có tải khoản ?
-                        <a href="./sign-in.html" class="auth__link auth__text-link">Đăng kí</a>
+                        <a href="./?act=signIn" class="auth__link auth__text-link">Đăng kí</a>
                     </p>
                 </div>
             </div>

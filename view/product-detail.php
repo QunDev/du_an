@@ -16,7 +16,10 @@
           $brand = $categoryName;
         }
     }
-    extract($dataUser);
+    if(isset($_SESSION["email"])) {
+        extract($dataUser);
+
+    }
 ?>
     <body>
         <!-- Header -->
