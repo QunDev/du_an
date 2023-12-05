@@ -112,12 +112,12 @@
         id="form-1"
         enctype="multipart/form-data"
       >
-        <h3 class="heading">Update Product</h3>
+        <h3 class="heading">Cập nhập sản phẩm </h3>
 
         <div class="spacer"></div>
 
         <div class="form-group">
-          <label for="productName" class="form-label">Product Name</label>
+          <label for="productName" class="form-label">Tên sản phẩm </label>
           <input
             id="productName"
             name="productName"
@@ -132,7 +132,7 @@
         </div>
 
         <div class="form-group">
-          <label for="description" class="form-label">Description</label>
+          <label for="description" class="form-label">Mô tả</label>
           <input
             id="description"
             name="description"
@@ -146,12 +146,12 @@
         </div>
 
         <div class="form-group">
-          <label for="price" class="form-label">Price</label>
+          <label for="price" class="form-label">Giá</label>
           <input
             id="price"
             name="price"
             type="number"
-            placeholder="$"
+            placeholder="20.000 VND"
             class="form-control"
             data-desc
             rule="required|number:0"
@@ -176,7 +176,7 @@
         </div>
 
         <div class="form-group">
-          <label for="Brand" class="form-label">Brand</label>
+          <label for="Brand" class="form-label">Thương hiệu </label>
           <select name="brand" id="brand" class="form-control" rule="required">
             <option value="" selected hidden></option>
             <?php
@@ -193,7 +193,7 @@
         </div>
 
         <div class="form-group">
-          <label for="image" class="form-label">Image</label>
+          <label for="image" class="form-label">Ảnh </label>
           <input
             id="image"
             name="image"
@@ -215,8 +215,8 @@
           <span class="form-message"></span>
         </div>
         <input name="id" type="text" value="<?php echo $_GET["id"]; ?>" hidden>
-        <input value="Update" type="submit" class="form-submit">   
-        <button class="form-submit" type="button"><a href="./?act=listProducts">Product</a></button>
+        <input value="Cập nhật" type="submit" class="form-submit">   
+        <button class="form-submit" type="button"><a href="./?act=listProducts">Trở về </a></button>
 
         <!-- <button class="form-submit" type="button" name="btnSubmit">Thêm</button> -->
         

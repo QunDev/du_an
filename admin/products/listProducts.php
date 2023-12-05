@@ -1,8 +1,82 @@
+<style>
+     button:hover{
+       background-color: violet;
+       color: brown;
+    }
+    .btn-create {
+      border: 2px solid pink;
+    }
+    .btnDelete {
+      margin-left: 16px;
+    }
+    .btnDelete, .thinhdeptrai {
+      border: 2px solid pink  ;
+      padding: 8px 16px;
+      border-radius: 999px;
+    }
+  p{
+    font-size: 30px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  th,
+  td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+
+
+  @media screen and (max-width: 600px) {
+
+    th,
+    td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    th {
+      text-align: center;
+    }
+  }
+
+
+  table {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  th,
+  td {
+    border-right: 1px solid #ddd;
+  }
+
+  th:last-child,
+  td:last-child {
+    border-right: none;
+  }
+</style>
 <div class="rows">
-  <a href="index.php?act=formCreateProduct"><button class="btn">Create</button></a>
+  <a href="index.php?act=formCreateProduct"><button class="btn">Thêm mới </button></a>
 </div>
 
-<h1>Table Category</h1>
+ <p><Strong> Bảng Danh Mục </Strong></p>
+ <br>
+ <br>
 
 <!-- <form
         action="index.php?action=listProduct"
@@ -42,15 +116,15 @@
 <table border="1" style="width: 100%">
       <thead>
         <tr>
-          <th>ID Product</th>
-          <th>Product Name</th>
-          <th>Description</th>
-          <th>Price</th>
+          <th>ID</th>
+          <th>Tên sản phẩm </th>
+          <th>Mô tả</th>
+          <th>Giá</th>
           <th>Stock</th>
-          <th>Brand</th>
-          <th>Img</th>
-          <th>CreatedAt</th>
-          <th>Actions</th>
+          <th>Thương Hiệu </th>
+          <th>Ảnh </th>
+          <th>Thời gian Tạo </th>
+          <th>Hành Động </th>
           
         </tr>
       </thead>
@@ -79,7 +153,7 @@
                     <td> '.$image.' </td>
                     <td> '.$createdAt.' </td>
                     <td>
-                        <button><a href="./?act=loadOneProduct&id='.$productID.'">Update</a></button>
+                        <button class="thinhdeptrai"><a href="./?act=loadOneProduct&id='.$productID.'">Update</a></button>
                         <button class="btnDelete" data-id="'.$productID.'">Delete</button>
                     </td>
                     </tr>';
