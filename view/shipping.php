@@ -39,7 +39,7 @@
                     <div class="row gy-xl-3">
                         <div class="col-8 col-xl-12">
                             <div class="cart-info">
-                                <h1 class="cart-info__heading">1. Vận chuyển, đến từ Thứ Hai, ngày 16 tháng 5—Thứ Ba, ngày 24 tháng 5</h1>
+                                <h1 class="cart-info__heading">1. Vận chuyển</h1>
                                 <div class="cart-info__separate"></div>
 
                                 <!-- Checkout address -->

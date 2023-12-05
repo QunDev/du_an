@@ -45,7 +45,7 @@
                 if(isset($_SESSION["email"])) {
                     unset($_SESSION["email"]);
                 }
-                header_remove("location");
+                include "./view/home.php";
                 break;
             case 'checkAccount':
                 $email = $_POST["email"];
@@ -55,17 +55,17 @@
                     if(isset($_SESSION["email"])) {
                         $dataProducts = getProducts();
                         header("location: ./?act=logined");
-                    } else {
-                        header("location: ./");
                     }
-                } 
+                } else {
+                    header("location: ./?act=signIn");
+                }
                 break;
             case 'checkSignUp':
                 if(isset($_POST["email"])) {
                     $email = $_POST["email"];
                     $password = $_POST["password"];
                     createUser($email, md5($password),date("l jS \of F Y h:i:s A"), 0);
-                    
+                    header("location: ./?act=signIn");
                 }
                 break;
             case 'logined':
@@ -92,9 +92,8 @@
                 }
                 $unitPrice = $_GET["price"];
                 addProductToOrder($user, $productId, 1, $unitPrice, date("l jS \of F Y h:i:s A"));
-                break;
             case 'checkout':
-                if(isset($_SESSION["email"]) || isset($_COOKIE["email"])) {
+                if(isset($_SESSION["email"])) {
                     $user = $_SESSION["email"];
                     $dataOrderDetial = getOrder($user);
                     include "./view/checkout.php";
