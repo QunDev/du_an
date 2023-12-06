@@ -1,10 +1,4 @@
-<?php
-    $subTotal = 0;
-    foreach ($dataOrderDetial as $data) {
-        extract($data);
-        $subTotal += $subtotal;
-    }
-?>
+
 
 <div class="container">
     <div class="top-bar">
@@ -64,6 +58,22 @@
                                 <h2 class="act-dropdown__title">You have 3 item(s)</h2>
                                 <a href="./favourite.html" class="act-dropdown__view-all">See All</a>
                             </div>
+                            <?php 
+                                $subTotal = 0;
+                                foreach ($dataOrderDetial as $data) {
+                                    extract($data);
+                                    $totalM = $unitPrice * $quantity;
+                                    $subTotal += $totalM; 
+                                    $imgPath = "./uploads/".$imageURL;
+                                    if(is_file($imgPath)) {
+                                        $image = $imgPath;
+                                        $noImg = "";
+                                    } else {
+                                        $image = "";
+                                        $noImg = "No photo";
+                                    }
+                                }
+                            ?>
                             <div class="row row-cols-3 gx-2 act-dropdown__list">
                                 <!-- Cart preview item 1 -->
                                 <div class="col">

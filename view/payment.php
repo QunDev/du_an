@@ -1,4 +1,10 @@
-
+<?php
+    $subTotal = 0;
+    foreach ($dataOrderDetial as $data) {
+        extract($data);
+        $subTotal += $subtotal * $quantity;
+    }
+?>
 
         <!-- MAIN -->
         <main class="checkout-page">
@@ -141,10 +147,16 @@
                                         
                                     </div>
                                     <div class="cart-info__row">
+                                        <span>Ship <label class="cart-info__sub-label"></label></span>
+                                        <span>30.000d</span>
+                                        
+                                    </div>
+
+                                    <div class="cart-info__row">
                                         <span>Price <span class="cart-info__sub-label">(Total)</span></span>
                                         <span>$
                                         <?php
-                                                echo $subTotal + 3;
+                                                echo $subTotal + 30000;
                                             ?>
                                         </span>
                                     </div>
@@ -152,15 +164,15 @@
                                     <div class="cart-info__row">
                                         <span>Estimated Total</span>
                                         <span>$<?php
-                                                echo $subTotal + 3;
+                                                echo $subTotal + 30000;
                                             ?></span>
                                     </div>
-                                    <input type="text" name="price" value="<?php echo $subTotal + 3; ?>" hidden>
+                                    <input type="text" name="price" value="<?php echo $subTotal + 30000; ?>" hidden>
                                     <input type="text" name="userId" value="<?php echo $userId; ?>" hidden>
                                     <input type="text" name="status" value="1" hidden>
                                     <input type="text" name="address" value="<?php  echo $shippingAddressId; ?>" >
                                         <input type="submit" class="cart-info__next-btn btn btn--primary btn--rounded" value="Pay $<?php
-                                                echo $subTotal + 3;
+                                                echo $subTotal + 30000;
                                             ?>" name="payment">
                                 </form>
                             <div class="cart-info">

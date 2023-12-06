@@ -41,7 +41,8 @@
                                         $subTotal = 0;
                                         foreach ($dataOrderDetial as $data) {
                                             extract($data);
-                                            $subTotal += $subtotal * $quantity; 
+                                            $totalM = $unitPrice * $quantity;
+                                            $subTotal += $totalM; 
                                             $imgPath = "./uploads/".$imageURL;
                                             if(is_file($imgPath)) {
                                                 $image = $imgPath;

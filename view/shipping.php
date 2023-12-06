@@ -1,4 +1,10 @@
-
+<?php
+    $subTotal = 0;
+    foreach ($dataOrderDetial as $data) {
+        extract($data);
+        $subTotal += $subtotal * $quantity;
+    }
+?>
 
         <!-- MAIN -->
         <main class="checkout-page">
@@ -113,11 +119,7 @@
 
                                 <div class="cart-info__separate"></div>
 
-                                <h2 class="cart-info__sub-heading">chi tiết sản phẩm </h2>
-                                <div class="cart-info__list">
-                                    <!-- Cart item 1 -->
-                                    
-                                </div>
+                                
                                 <div class="cart-info__bottom d-md-none">
                                     <div class="row">
                                         <div class="col-8 col-xxl-7">
@@ -132,29 +134,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="col-4 col-xxl-5">
-                                            <div class="cart-info__row">
-                                                <span>Tổng phụ:</span>
-                                                <span>đ
-                                                <?php
-                                                    echo $subTotal;
-                                                ?>
-                                                </span>
-                                            </div>
-                                            <div class="cart-info__row">
-                                                <span>Giao Hàng:</span>
-                                                <span>69.000đ</span>
-                                            </div>
-                                            <div class="cart-info__separate"></div>
-                                            <div class="cart-info__row cart-info__row--bold">
-                                                <span>Tổng:</span>
-                                                <span>
-                                                <?php
-                                                    echo $subTotal + 3;
-                                                ?>đ
-                                                </span>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -166,18 +146,22 @@
                                     <span><?php echo $countOrders; ?></span>
                                 </div>
                                 <div class="cart-info__row">
+                                    <span>Ship <span class="cart-info__sub-label"></span></span>
+                                    <span>30.000d</span>
+                                </div>
+                                <div class="cart-info__row">
                                     <span>Price <span class="cart-info__sub-label">(Tổng)</span></span>
                                     <span>
                                     <?php
-                                            echo $subTotal + 3;
-                                        ?>đ
+                                            echo $subTotal + 30000;
+                                        ?>d
                                     </span>
                                 </div>
                                 <div class="cart-info__separate"></div>
                                 <div class="cart-info__row">
                                     <span>Tổng phải trả</span>
                                     <span>$<?php
-                                            echo $subTotal + 3;
+                                            echo $subTotal + 30000;
                                         ?></span>
                                 </div>
                                 <a href="./?act=payment" class="cart-info__next-btn btn btn--primary btn--rounded" id="nextURL">

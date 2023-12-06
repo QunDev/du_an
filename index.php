@@ -87,6 +87,11 @@
                         if($productId == $productID) {
                             $quantity++;
                             updateQuantity($productId, $quantity, $unitPrice, date("l jS \of F Y h:i:s A"));
+                            if(isset($_SESSION["email"])) {
+                                $user = $_SESSION["email"];
+                                $dataOrderDetial = getOrder($user);
+                                include "./view/checkout.php";
+                            }
                             exit;
                         }
                     }
