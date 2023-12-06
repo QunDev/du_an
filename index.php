@@ -180,6 +180,10 @@
                 $data = getByIdBuy($id);
                 include "./view/buyDetail.php";
                 break;
+            case 'updateAddress':
+                $value = $_GET["address"];
+                $id = $_GET["id"];
+                updateIn4($value, $id);
             default:
                 
                 include "./view/home.php";

@@ -77,10 +77,17 @@
     }
 
     function getByIdBuy($id) {
-        $sql = "select b.buyId, b.buyDate, b.isCompleted, b.paymentMethod, b.totalAmount, b.quantityProduct, p.productName, p.imageURL FROM `buy` as b 
+        $sql = "select b.buyId, b.buyDate, b.isCompleted, b.paymentMethod, b.totalAmount, b.quantityProduct, p.productName, s.shippingAddressId, p.imageURL, s.address, s.phone, s.name FROM `buy` as b 
         INNER JOIN products as p on p.productID = b.productId
         INNER JOIN user as u on u.userID = b.userId
-        where b.buyId =".$id;
+        INNER JOIN shippingAddress as s on s.shippingAddressId = b.shippingAddress
+        where b.buyId = ".$id;
         return pdo_query($sql);
+    }
+
+// update 
+    function updateIn4($value, $id) {
+        $sql = "UPDATE `shippingaddress` SET `address`='".$value."' WHERE shippingAddressId=".$id;
+        pdo_execute($sql);
     }
 ?>

@@ -92,17 +92,62 @@
                                                     }
                                                     echo '
                                                         <div class="col">
-                                                            <a href="./?act=buyDetail&id='.$buyId.'">
+                                                            <div >
                                                                 <article class="account-info">
                                                                     <div class="account-info__icon">
                                                                         <img src="'.$image.'" alt="" class="icon" width=50 style="object-fit: cover; filter: none;"/>
                                                                     </div>
-                                                                    <div>
+                                                                    <div >
                                                                         <h3 class="account-info__title">'.$productName.' x '.$quantityProduct.'</h3>
                                                                         <p class="account-info__desc">'.$isCompleted.'</p>
                                                                     </div>
+                                                                    <div style="margin-left: 30px">
+                                                                        <h3 class="account-info__title">Ngày đặt hàng</h3>
+                                                                        <p class="account-info__desc">'.$buyDate.'</p>
+                                                                    </div>
+                                                                    <div style="margin-left: 30px">
+                                                                        <h3 class="account-info__title">Giá</h3>
+                                                                        <p class="account-info__desc">'.$totalAmount.'</p>
+                                                                    </div>
+                                                                    
                                                                 </article>
-                                                            </a>
+                                                                
+                                                                <article class="account-info" style="margin-top: 16px; display: flex; justify-content: space-around">
+                                                                    <div >
+                                                                        <h3 class="account-info__title">Địa chỉ nhận hàng: '.$address.'</h3>
+                                                                        <p class="account-info__desc"></p>
+                                                                    </div>
+
+                                                                    <div >
+                                                                        <button class="btn js-toggle" style="color: #000" toggle-target="#update-confirm">Sửa</button>
+                                                                    </div>
+                                                                    
+                                                                </article>
+
+                                                                <article class="account-info" style="margin-top: 16px; display: flex; justify-content: space-around">
+                                                                    <div >
+                                                                        <h3 class="account-info__title">Tên người nhận: '.$name.'</h3>
+                                                                        <p class="account-info__desc"></p>
+                                                                    </div>
+
+                                                                    <div >
+                                                                        <button class="btn js-toggle" style="color: #000" toggle-target="#update-name">Sửa</button>
+                                                                    </div>
+                                                                    
+                                                                </article>
+
+                                                                <article class="account-info" style="margin-top: 16px; display: flex; justify-content: space-around">
+                                                                    <div >
+                                                                        <h3 class="account-info__title">Số điện thoại: '.$phone.'</h3>
+                                                                        <p class="account-info__desc"></p>
+                                                                    </div>
+
+                                                                    <div >
+                                                                        <button class="btn js-toggle" style="color: #000" toggle-target="#update-phone">Sửa</button>
+                                                                    </div>
+                                                                    
+                                                                </article>
+                                                            </div>
                                                         </div>
                                                     ';
                                                 }
@@ -125,23 +170,76 @@
             load("#footer", "./templates/footer.html");
         </script>
 
-        <!-- Modal: confirm remove shopping cart item -->
-        <div id="delete-confirm" class="modal modal--small hide">
+        
+        <div id="update-confirm" class="modal modal--small hide">
             <div class="modal__content">
-                <p class="modal__text">Bạn có muốn xóa mặt hàng này khỏi giỏ hàng không?</p>
+                <form action="">
+                    <label for="address">Địa chỉ mới:</label>
+                    <input class="update-input" type="text" name="address" id="address" style="border: 1px solid while" placeholder="address">
+                </form>
+                <div class="js-toggle" toggle-target="#update-confirm" class="error"></div>
                 <div class="modal__bottom">
-                    <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">
+                    <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#update-confirm">
                         Cancel
                     </button>
                     <button
-                        class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin js-toggle"
-                        toggle-target="#delete-confirm"
+                        class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin"
+                        toggle-target="#update-confirm" 
+                        id="update-address"
+                        data-idShip="<?php echo $shippingAddressId; ?>"
                     >
-                        Xóa
+                        Thay đổi
                     </button>
                 </div>
+                
             </div>
-            <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
+        </div>
+
+        <div id="update-name" class="modal modal--small hide">
+            <div class="modal__content">
+                <form action="">
+                    <label for="name">Tên người nhận mới:</label>
+                    <input class="update-name" type="text" name="name" id="name" style="border: 1px solid while" placeholder="address">
+                </form>
+                <div class="js-toggle" toggle-target="#update-confirm" class="error"></div>
+                <div class="modal__bottom">
+                    <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#update-name">
+                        Cancel
+                    </button>
+                    <button
+                        class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin"
+                        toggle-target="#update-name" 
+                        id="update-name"
+                    >
+                        Thay đổi
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="update-phone" class="modal modal--small hide">
+            <div class="modal__content">
+                <form action="">
+                    <label for="phone">Địa chỉ mới:</label>
+                    <input class="update-phone" type="text" name="phone" id="phone" style="border: 1px solid while" placeholder="address">
+                </form>
+                <div class="js-toggle" toggle-target="#update-phone" class="error"></div>
+                <div class="modal__bottom">
+                    <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#update-confirm">
+                        Cancel
+                    </button>
+                    <button
+                        class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin"
+                        toggle-target="#update-phone" 
+                        id="update-phone"
+                    >
+                        Thay đổi
+                    </button>
+                </div>
+                
+            </div>
         </div>
     </body>
+    <script src="./assets/js/buy.js"></script>
 </html>
