@@ -66,4 +66,21 @@
                     VALUES ('".$proId."','".$userId."','".$date."','".$complete."','".$pay."','".$address."','".$total."','".$quantity."')";
         pdo_execute($sql);
     }
+
+// Lấy sản phẩm đã thanh toán
+    function getBySuccess($id) {
+        $sql = "select b.buyId, b.buyDate, b.isCompleted, b.paymentMethod, b.totalAmount, b.quantityProduct, p.productName, p.imageURL FROM `buy` as b 
+        INNER JOIN products as p on p.productID = b.productId
+        INNER JOIN user as u on u.userID = b.userId
+        where b.userId =".$id;
+        return pdo_query($sql);
+    }
+
+    function getByIdBuy($id) {
+        $sql = "select b.buyId, b.buyDate, b.isCompleted, b.paymentMethod, b.totalAmount, b.quantityProduct, p.productName, p.imageURL FROM `buy` as b 
+        INNER JOIN products as p on p.productID = b.productId
+        INNER JOIN user as u on u.userID = b.userId
+        where b.buyId =".$id;
+        return pdo_query($sql);
+    }
 ?>

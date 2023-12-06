@@ -159,12 +159,26 @@
 
                         buySuccess($productID, $userId, date("l jS \of F Y h:i:s A"), "Đợi xác nhận", $pay, $address, $unitPrice + 3, $quantity);
                     }
+                    extract($dataUser);
+                    $data = getBySuccess($userId);
+                    include "./view/buy.php";
                 }
                 
                 break;
             case 'profile':
-                $dataProduct = getOrder($_GET["id"]);
+                extract($dataUser);
                 include "./view/profile.php";
+                break;
+            case 'buy':
+                extract($dataUser);
+                $data = getBySuccess($userId);
+                include "./view/buy.php";
+                break;
+            case 'buyDetail':
+                extract($dataUser);
+                $id = $_GET["id"];
+                $data = getByIdBuy($id);
+                include "./view/buyDetail.php";
                 break;
             default:
                 
