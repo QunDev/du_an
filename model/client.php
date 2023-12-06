@@ -1,7 +1,7 @@
 <?php
 // Lấy user theo email
     function getUserByEmail($email) {
-        $sql = 'select user.userID, user.email,user.password, user.createdAt FROM `user` WHERE user.email = "'.$email.'"';
+        $sql = 'select user.userID, user.email,user.password, user.createdAt, user.role FROM `user` WHERE user.email = "'.$email.'"';
         return pdo_query_one($sql);
     }
 // Kiểm tra TK,MK
