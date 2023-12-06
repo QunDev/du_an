@@ -47,7 +47,7 @@
                             <div class="cart-info">
                                 <div class="cart-info__top">
                                     <h2 class="cart-info__heading cart-info__heading--lv2">
-                                        1. Vận chuyển tới bạn
+                                        1. Vận chuyển
                                     </h2>
                                 </div>
 
