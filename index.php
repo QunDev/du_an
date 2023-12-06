@@ -176,7 +176,7 @@
                 break;
             case 'buy':
                 extract($dataUser);
-                $data = getBySuccess($userId);
+                $data = getBySuccess($userID);
                 include "./view/buy.php";
                 break;
             case 'buyDetail':

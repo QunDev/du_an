@@ -77,9 +77,10 @@
     }
 
     function getBySuccess($id) {
-        $sql = "select b.buyId, b.buyDate, b.isCompleted, b.paymentMethod, b.totalAmount, b.quantityProduct, p.productName, p.imageURL FROM `buy` as b 
+        $sql = "select b.buyId, b.buyDate, b.paymentMethod, b.totalAmount, b.quantityProduct, p.productName, p.imageURL, so.status as isCompleted FROM `buy` as b 
         INNER JOIN products as p on p.productID = b.productId
         INNER JOIN user as u on u.userID = b.userId
+        INNER JOIN statusoder as so on b.isCompleted = so.statusOrderId
         where b.userId =".$id;
         return pdo_query($sql);
     }

@@ -121,6 +121,7 @@
                         $data = getAllByIdBuy();
                         include "./order/listOrder.php";
                         break;
+                    
                     default:
                         break;
                 }

@@ -118,12 +118,12 @@
         <tr>
           <th>ID</th>
           <th>Tên sản phẩm </th>
-          <th>Mô tả</th>
-          <th>Giá</th>
-          <th>Stock</th>
-          <th>Thương Hiệu </th>
-          <th>Ảnh </th>
-          <th>Thời gian Tạo </th>
+          <th>Tổng tiền</th>
+          <th>Số lượng sản phẩm</th>
+          <th>Tên người nhận</th>
+          <th>Địa chỉ người nhận</th>
+          <th>Số điện thoại người nhận</th>
+          <th>Trạng thái</th>
           <th>Hành Động </th>
           
         </tr>
@@ -140,12 +140,21 @@
           }
           
               echo '<tr>
+                    <td> '.$buyId.' </td>
                     <td> '.$productName.' </td>
                     <td> '.$totalAmount.' </td>
                     <td> '.$quantityProduct.' </td>
                     <td> '.$name.' </td>
                     <td> '.$address.' </td>
                     <td> '.$phone.' </td>
+                    <td> 
+                        <select name="status" id="status" data-id="'.$buyId.'">
+                            <option value="1" selected hidden>'.$isCompleted.'</option>
+                            <option value="2">Đang chuẩn bị hàng</option>
+                            <option value="3">Đơn hàng đã được giao</option>
+                            <option value="4">Đơn hàng đã hủy</option>
+                        </select>
+                    </td>
                     <td>
                         <button class="thinhdeptrai"><a href="./?act=loadOneProduct&id='.$productID.'">Update</a></button>
                         <button class="btnDelete" data-id="'.$productID.'">Delete</button>
@@ -159,4 +168,4 @@
       </tbody>
 </table>
 
-<script src="./assets/js/products.js"></script>
+<script src="./assets/js/order.js"></script>
