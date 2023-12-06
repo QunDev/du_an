@@ -58,58 +58,17 @@
                                 <h2 class="act-dropdown__title">You have 3 item(s)</h2>
                                 <a href="./favourite.html" class="act-dropdown__view-all">See All</a>
                             </div>
-                            <?php 
-                                $subTotal = 0;
-                                foreach ($dataOrderDetial as $data) {
-                                    extract($data);
-                                    $totalM = $unitPrice * $quantity;
-                                    $subTotal += $totalM; 
-                                    $imgPath = "./uploads/".$imageURL;
-                                    if(is_file($imgPath)) {
-                                        $image = $imgPath;
-                                        $noImg = "";
-                                    } else {
-                                        $image = "";
-                                        $noImg = "No photo";
-                                    }
-                                }
-                            ?>
+                            
                             <div class="row row-cols-3 gx-2 act-dropdown__list">
-                                <!-- Cart preview item 1 -->
-                                <div class="col">
-                                    <article class="cart-preview-item">
-                                        <div class="cart-preview-item__img-wrap">
-                                            <img src="./assets/img/product/item-1.png" alt=""
-                                                class="cart-preview-item__thumb" />
-                                        </div>
-                                        <h3 class="cart-preview-item__title">Lavazza Coffee Blends</h3>
-                                        <p class="cart-preview-item__price">$329.00</p>
-                                    </article>
-                                </div>
-
-                                <!-- Cart preview item 2 -->
-                                <div class="col">
-                                    <article class="cart-preview-item">
-                                        <div class="cart-preview-item__img-wrap">
-                                            <img src="./assets/img/product/item-2.png" alt=""
-                                                class="cart-preview-item__thumb" />
-                                        </div>
-                                        <h3 class="cart-preview-item__title">Coffee Beans Espresso</h3>
-                                        <p class="cart-preview-item__price">$39.99</p>
-                                    </article>
-                                </div>
-
-                                <!-- Cart preview item 3 -->
-                                <div class="col">
-                                    <article class="cart-preview-item">
-                                        <div class="cart-preview-item__img-wrap">
-                                            <img src="./assets/img/product/item-3.png" alt=""
-                                                class="cart-preview-item__thumb" />
-                                        </div>
-                                        <h3 class="cart-preview-item__title">Qualità Oro Mountain</h3>
-                                        <p class="cart-preview-item__price">$47.00</p>
-                                    </article>
-                                </div>
+                                <?php 
+                                    $subTotal = 0;
+                                    foreach ($dataOrderDetial as $data) {
+                                        extract($data);
+                                        $totalM = $unitPrice * $quantity;
+                                        $subTotal += $totalM; 
+                                        
+                                    }
+                                ?>
                             </div>
                             <div class="act-dropdown__separate"></div>
                             <div class="act-dropdown__checkout">
@@ -135,68 +94,61 @@
                         <div class="act-dropdown__inner">
                             <img src="./assets/icons/arrow-up.png" alt="" class="act-dropdown__arrow" />
                             <div class="act-dropdown__top">
-                                <h2 class="act-dropdown__title">You have 3 item(s)</h2>
-                                <a href="./?act=checkout" class="act-dropdown__view-all">See All</a>
+                                <h2 class="act-dropdown__title">Bạn có <?php echo $countOrders ?> sản phẩm</h2>
+                                <a href="./?act=checkout" class="act-dropdown__view-all">Hiển thị tất cả</a>
                             </div>
                             <div class="row row-cols-3 gx-2 act-dropdown__list">
-                                <!-- Cart preview item 1 -->
-                                <div class="col">
-                                    <article class="cart-preview-item">
-                                        <div class="cart-preview-item__img-wrap">
-                                            <img src="./assets/img/product/item-1.png" alt=""
-                                                class="cart-preview-item__thumb" />
+                            <?php 
+                                $subTotal = 0;
+                                foreach ($dataOrderDetial as $data) {
+                                    extract($data);
+                                    $totalM = $unitPrice * $quantity;
+                                    $subTotal += $totalM; 
+                                    $imgPath = "./uploads/".$imageURL;
+                                    if(is_file($imgPath)) {
+                                        $image = $imgPath;
+                                        $noImg = "";
+                                    } else {
+                                        $image = "";
+                                        $noImg = "No photo";
+                                    }
+                                    echo '
+                                        <div class="col">
+                                            <article class="cart-preview-item">
+                                                <div class="cart-preview-item__img-wrap">
+                                                    <img src="'.$image.'" alt=""
+                                                        class="cart-preview-item__thumb" />
+                                                </div>
+                                                <h3 class="cart-preview-item__title">'.$productName.'</h3>
+                                                <p class="cart-preview-item__price">'.$unitPrice.'d</p>
+                                            </article>
                                         </div>
-                                        <h3 class="cart-preview-item__title">Lavazza Coffee Blends</h3>
-                                        <p class="cart-preview-item__price">$329.00</p>
-                                    </article>
-                                </div>
-
-                                <!-- Cart preview item 2 -->
-                                <div class="col">
-                                    <article class="cart-preview-item">
-                                        <div class="cart-preview-item__img-wrap">
-                                            <img src="./assets/img/product/item-2.png" alt=""
-                                                class="cart-preview-item__thumb" />
-                                        </div>
-                                        <h3 class="cart-preview-item__title">Coffee Beans Espresso</h3>
-                                        <p class="cart-preview-item__price">$39.99</p>
-                                    </article>
-                                </div>
-
-                                <!-- Cart preview item 3 -->
-                                <div class="col">
-                                    <article class="cart-preview-item">
-                                        <div class="cart-preview-item__img-wrap">
-                                            <img src="./assets/img/product/item-3.png" alt=""
-                                                class="cart-preview-item__thumb" />
-                                        </div>
-                                        <h3 class="cart-preview-item__title">Qualità Oro Mountain</h3>
-                                        <p class="cart-preview-item__price">$47.00</p>
-                                    </article>
-                                </div>
+                                    ';
+                                }
+                            ?>
                             </div>
                             <div class="act-dropdown__bottom">
                                 <div class="act-dropdown__row">
-                                    <span class="act-dropdown__label">Subtotal</span>
-                                    <span class="act-dropdown__value">$415.99</span>
+                                    <span class="act-dropdown__label">Thành tiền</span>
+                                    <span class="act-dropdown__value"><?php echo $subTotal; ?></span>
                                 </div>
                                 <div class="act-dropdown__row">
-                                    <span class="act-dropdown__label">Texes</span>
-                                    <span class="act-dropdown__value">Free</span>
+                                    <span class="act-dropdown__label">Thuế</span>
+                                    <span class="act-dropdown__value">Miễn phí</span>
                                 </div>
                                 <div class="act-dropdown__row">
-                                    <span class="act-dropdown__label">Shipping</span>
-                                    <span class="act-dropdown__value">$10.00</span>
+                                    <span class="act-dropdown__label">Ship</span>
+                                    <span class="act-dropdown__value">30.000d</span>
                                 </div>
                                 <div class="act-dropdown__row act-dropdown__row--bold">
-                                    <span class="act-dropdown__label">Total Price</span>
-                                    <span class="act-dropdown__value">$425.99</span>
+                                    <span class="act-dropdown__label">Tổng tiền phải trả</span>
+                                    <span class="act-dropdown__value"><?php echo $subTotal + 30000; ?></span>
                                 </div>
                             </div>
                             <div class="act-dropdown__checkout">
                                 <a href="./?act=checkout"
                                     class="btn btn--primary btn--rounded act-dropdown__checkout-btn">
-                                    Check Out All
+                                    Kiểm tra tất cả
                                 </a>
                             </div>
                         </div>
@@ -223,10 +175,10 @@
 
                         <ul class="user-menu__list">
                             <li>
-                                <a href="./?act=profile" class="user-menu__link">Profile</a>
+                                <a href="./?act=profile" class="user-menu__link">Hồ sơ</a>
                             </li>
                             <li>
-                                <a href="./favourite.html" class="user-menu__link">Favourite list</a>
+                                <a href="./favourite.html" class="user-menu__link">Danh sách yêu thích</a>
                             </li>
                             <li class="user-menu__separate">
                                 <a href="#!" class="user-menu__link" id="switch-theme-btn">
@@ -235,10 +187,10 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#!" class="user-menu__link">Settings</a>
+                                <a href="#!" class="user-menu__link">Cài đặt</a>
                             </li>
                             <li class="user-menu__separate">
-                                <a href="./?act=logOut" class="user-menu__link">Logout</a>
+                                <a href="./?act=logOut" class="user-menu__link">Đăng xuất</a>
                             </li>
                         </ul>
                     </div>

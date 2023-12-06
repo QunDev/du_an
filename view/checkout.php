@@ -129,9 +129,9 @@
                                         <div class="col-4 col-xxl-5">
                                             <div class="cart-info__row">
                                                 <span>Subtotal:</span>
-                                                <span>$<?php
+                                                <span><?php
                                                     echo $subTotal;
-                                                ?></span>
+                                                ?>d</span>
                                             </div>
                                             <div class="cart-info__row">
                                                 <span>Shipping:</span>
