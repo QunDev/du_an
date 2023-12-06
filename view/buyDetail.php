@@ -44,7 +44,7 @@
                                     <h3 class="profile-menu__title">Sản phẩm của tôi</h3>
                                     <ul class="profile-menu__list">
                                         <li>
-                                            <a href="#!" class="profile-menu__link">
+                                            <a href="./?act=buy" class="profile-menu__link">
                                                 <span class="profile-menu__icon">
                                                     <img src="./assets/icons/download.svg" alt="" class="icon" />
                                                 </span>
@@ -199,7 +199,7 @@
             <div class="modal__content">
                 <form action="">
                     <label for="name">Tên người nhận mới:</label>
-                    <input class="update-name" type="text" name="name" id="name" style="border: 1px solid while" placeholder="address">
+                    <input class="update-name" type="text" name="name" id="name" style="border: 1px solid while" placeholder="Name">
                 </form>
                 <div class="js-toggle" toggle-target="#update-confirm" class="error"></div>
                 <div class="modal__bottom">
@@ -210,6 +210,7 @@
                         class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin"
                         toggle-target="#update-name" 
                         id="update-name"
+                        data-idShip="<?php echo $shippingAddressId; ?>"
                     >
                         Thay đổi
                     </button>
@@ -222,7 +223,7 @@
             <div class="modal__content">
                 <form action="">
                     <label for="phone">Địa chỉ mới:</label>
-                    <input class="update-phone" type="text" name="phone" id="phone" style="border: 1px solid while" placeholder="address">
+                    <input class="update-phone" type="text" name="phone" id="phone" style="border: 1px solid while" placeholder="phone">
                 </form>
                 <div class="js-toggle" toggle-target="#update-phone" class="error"></div>
                 <div class="modal__bottom">
@@ -233,6 +234,7 @@
                         class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin"
                         toggle-target="#update-phone" 
                         id="update-phone"
+                        data-idShip="<?php echo $shippingAddressId; ?>"
                     >
                         Thay đổi
                     </button>

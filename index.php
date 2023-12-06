@@ -156,8 +156,8 @@
                     $address = $_GET["address"];
                     foreach (getOrder($_SESSION["email"]) as $value) {
                         extract($value);
-
                         buySuccess($productID, $userId, date("l jS \of F Y h:i:s A"), "Đợi xác nhận", $pay, $address, $unitPrice + 3, $quantity);
+                        deleteProductDone($orderDetailID);
                     }
                     extract($dataUser);
                     $data = getBySuccess($userId);
@@ -184,6 +184,26 @@
                 $value = $_GET["address"];
                 $id = $_GET["id"];
                 updateIn4($value, $id);
+                extract($dataUser);
+                $data = getBySuccess($userId);
+                include "./view/buy.php";
+                break;
+            case 'updateName':
+                $value = $_GET["name"];
+                $id = $_GET["id"];
+                updateIn4Name($value, $id);
+                extract($dataUser);
+                $data = getBySuccess($userId);
+                include "./view/buy.php";
+                break;
+            case 'updatePhone':
+                $value = $_GET["phone"];
+                $id = $_GET["id"];
+                updateIn4Phone($value, $id);
+                extract($dataUser);
+                $data = getBySuccess($userId);
+                include "./view/buy.php";
+                break;
             default:
                 
                 include "./view/home.php";

@@ -14,7 +14,7 @@
 
 // Lấy sản phẩm 
     function getOrder($user) {
-        $sql = "select o.quantity, o.unitPrice, o.subtotal, p.productID, p.price, p.productName,  p.imageURL, u.userId FROM `orderdetails` as o  
+        $sql = "select o.orderDetailID, o.quantity, o.unitPrice, o.subtotal, p.productID, p.price, p.productName,  p.imageURL, u.userId FROM `orderdetails` as o  
                 LEFT JOIN products as p ON o.productID = p.productID
                 LEFT join user as u on o.userId = u.userId WHERE u.email = '".$user."';";
         return pdo_query($sql);
@@ -89,5 +89,20 @@
     function updateIn4($value, $id) {
         $sql = "UPDATE `shippingaddress` SET `address`='".$value."' WHERE shippingAddressId=".$id;
         pdo_execute($sql);
+    }
+    function updateIn4Name($value, $id) {
+        $sql = "UPDATE `shippingaddress` SET `name`='".$value."' WHERE shippingAddressId=".$id;
+        pdo_execute($sql);
+    }
+    function updateIn4Phone($value, $id) {
+        $sql = "UPDATE `shippingaddress` SET `phone`='".$value."' WHERE shippingAddressId=".$id;
+        pdo_execute($sql);
+    }
+
+// Xóa sản phẩm sau khi thanh toán
+    function deleteProductDone($id) {
+        $sql = "delete FROM `orderdetails` WHERE orderDetailID=".$id;
+        pdo_execute($sql);
+        
     }
 ?>
