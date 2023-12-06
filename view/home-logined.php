@@ -44,7 +44,7 @@
 
                     <div id="home-filter" class="filter hide">
                         <img src="./assets/icons/arrow-up.png" alt="" class="filter__arrow" />
-                        <h3 class="filter__heading">Filter</h3>
+                        <h3 class="filter__heading">Lọc </h3>
                         <form action="" class="filter__form form">
                             <div class="filter__row filter__content">
                                 <!-- Filter column 1 -->
