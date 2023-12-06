@@ -24,7 +24,7 @@
         <!-- Browse Categories -->
         <section class="home__container">
             <div class="home__row">
-                <h2 class="home__heading">Browse Categories</h2>
+                <h2 class="home__heading">Thương hiệu nổi bật</h2>
             </div>
             <div class="home__cate row row-cols-3 row-cols-md-1">
                 <!-- Category item 1 -->
