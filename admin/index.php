@@ -5,6 +5,7 @@
     include "../model/categories.php";
     include "../model/products.php";
     include "../model/client.php";
+    include "../model/cart.php";
 
     
 
@@ -114,6 +115,12 @@
                                 header("location: ./?act=listProducts");
                             }
                             break;
+                            // ===========================================================
+
+                    case 'order':
+                        $data = getAllByIdBuy();
+                        include "./order/listOrder.php";
+                        break;
                     default:
                         break;
                 }

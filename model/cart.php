@@ -68,6 +68,14 @@
     }
 
 // Lấy sản phẩm đã thanh toán
+    function getAllByIdBuy() {
+        $sql = "select b.buyId, b.buyDate, b.isCompleted, b.paymentMethod, b.totalAmount, b.quantityProduct, p.productName, s.shippingAddressId, p.imageURL, s.address, s.phone, s.name FROM `buy` as b 
+        INNER JOIN products as p on p.productID = b.productId
+        INNER JOIN user as u on u.userID = b.userId
+        INNER JOIN shippingAddress as s on s.shippingAddressId = b.shippingAddress";
+        return pdo_query($sql);
+    }
+
     function getBySuccess($id) {
         $sql = "select b.buyId, b.buyDate, b.isCompleted, b.paymentMethod, b.totalAmount, b.quantityProduct, p.productName, p.imageURL FROM `buy` as b 
         INNER JOIN products as p on p.productID = b.productId

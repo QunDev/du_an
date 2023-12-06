@@ -41,6 +41,25 @@
             <h1 class="logo__title top-bar__logo-title">grocerymart</h1>
         </a>
 
+        <ul class="navbar__list js-dropdown-list">
+                <li class="navbar__item">
+                    <a href="./?act=listCategories" class="navbar__link">
+                        Danh mục
+                        <img src="./assets/icons/arrow-down.svg" alt="" class="icon navbar__arrow" />
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="./?act=listProducts" class="navbar__link">
+                        Sản phẩm
+                        <img src="./assets/icons/arrow-down.svg" alt="" class="icon navbar__arrow" />
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="./?act=order" class="navbar__link">
+                        Quản lí đơn hàng
+                        <img src="./assets/icons/arrow-down.svg" alt="" class="icon navbar__arrow" />
+                    </a>
+                </li>
         
     </div>
 </div>
