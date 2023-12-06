@@ -19,13 +19,13 @@
 
             <a href="./checkout.html" class="nav-btn d-none d-md-flex">
                 <img src="./assets/icons/buy.svg" alt="" class="nav-btn__icon icon" />
-                <span class="nav-btn__title">Cart</span>
+                <span class="nav-btn__title">Giỏ hàng</span>
                 <span class="nav-btn__qnt">3</span>
             </a>
 
             <a href="#!" class="nav-btn d-none d-md-flex">
                 <img src="./assets/icons/heart.svg" alt="" class="nav-btn__icon icon" />
-                <span class="nav-btn__title">Favorite</span>
+                <span class="nav-btn__title">Yêu thích </span>
                 <span class="nav-btn__qnt">3</span>
             </a>
 
@@ -35,8 +35,8 @@
 
         <!-- Actions -->
         <div class="top-act">
-            <a href="./?act=signIn" class="btn btn--text d-md-none">Sign In</a>
-            <a href="./?act=signUp" class="top-act__sign-up btn btn--primary">Sign Up</a>
+            <a href="./?act=signIn" class="btn btn--text d-md-none">Đăng nhập </a>
+            <a href="./?act=signUp" class="top-act__sign-up btn btn--primary">Đăng ký </a>
         </div>
     </div>
 </div>

@@ -24,7 +24,7 @@
         <!-- Browse Categories -->
         <section class="home__container">
             <div class="home__row">
-                <h2 class="home__heading">Tổng sản phẩm </h2>
+                <h2 class="home__heading">Thương hiệu nổi bật  </h2>
             </div>
             <div class="home__cate row row-cols-3 row-cols-md-1">
                 <!-- Category item 1 -->
@@ -52,10 +52,10 @@
         <!-- Browse Products -->
         <section class="home__container">
             <div class="home__row">
-                <h2 class="home__heading">Thương hiệu nổi bật <?php echo $quantity ?></h2>
+                <h2 class="home__heading"> Tổng sản phẩm: <?php echo $quantity ?></h2>
                 <div class="filter-wrap">
                     <button class="filter-btn js-toggle" toggle-target="#home-filter">
-                        Filter
+                      Lọc
                         <img src="./assets/icons/filter.svg" alt="" class="filter-btn__icon icon" />
                     </button>
 
@@ -66,7 +66,7 @@
                             <div class="filter__row filter__content">
                                 <!-- Filter column 1 -->
                                 <div class="filter__col">
-                                    <label for="" class="form__label">Price</label>
+                                    <label for="" class="form__label">Giá</label>
                                     <div class="filter__form-group">
                                         <div class="filter__form-slider" style="--min-value: 10%; --max-value: 60%">
                                         </div>

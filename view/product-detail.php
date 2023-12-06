@@ -45,7 +45,7 @@
                             echo '
                                 <li>
                                 <a href="./" class="breadcrumbs__link">
-                                    Home
+                                    Trang chủ
                                     <img src="./assets/icons/arrow-right.svg" alt="" />
                                 </a>
                                 </li>
@@ -131,9 +131,9 @@
                                             </div>
                                             <div class="filter__form-group">
                                                 <div class="form__tags">
-                                                    <button class="form__tag prod-info__tag">Small</button>
-                                                    <button class="form__tag prod-info__tag">Medium</button>
-                                                    <button class="form__tag prod-info__tag">Large</button>
+                                                    <button class="form__tag prod-info__tag">Nhỏ </button>
+                                                    <button class="form__tag prod-info__tag">Bình thường</button>
+                                                    <button class="form__tag prod-info__tag">To</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -155,20 +155,10 @@
                                                     />
                                                     <div>
                                                         <h4 class="prod-prop__title">Vận chuyển</h4>
-                                                        <p class="prod-prop__desc">Từ $6 trong 1-3 ngày</p>
+                                                        <p class="prod-prop__desc">Trong 1-3 ngày</p>
                                                     </div>
                                                 </div>
-                                                <div class="prod-prop">
-                                                    <img
-                                                        src="./assets/icons/bag.svg"
-                                                        alt=""
-                                                        class="prod-prop__icon icon"
-                                                    />
-                                                    <div>
-                                                        <h4 class="prod-prop__title">Pickup</h4>
-                                                        <p class="prod-prop__desc">Out of 2 store, today</p>
-                                                    </div>
-                                                </div>
+                                              
                                                 <div class="prod-info__card">
                                                     <div class="prod-info__row">
                                                         <span class="prod-info__price">$<?php echo $price ?></span>
@@ -177,7 +167,7 @@
                                                     <p class="prod-info__total-price">$<?php echo $price/100*10 + $price ?></p>
                                                     <div class="prod-info__row">
                                                         <button class="btn btn--primary prod-info__add-to-cart" type="submit">
-                                                            Add to cart
+                                                          Thêm vào giỏ hàng
                                                         </button>
                                                         <button class="like-btn prod-info__like-btn">
                                                             <img

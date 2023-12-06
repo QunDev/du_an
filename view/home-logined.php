@@ -35,7 +35,7 @@
         <!-- Browse Products -->
         <section class="home__container">
             <div class="home__row">
-                <h2 class="home__heading">Total LavAzza <?php echo $quantity ?></h2>
+                <h2 class="home__heading">Tổng sản phẩm: <?php echo $quantity ?></h2>
                 <div class="filter-wrap">
                     <button class="filter-btn js-toggle" toggle-target="#home-filter">
                         Filter

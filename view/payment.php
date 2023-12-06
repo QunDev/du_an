@@ -47,7 +47,7 @@
                             <div class="cart-info">
                                 <div class="cart-info__top">
                                     <h2 class="cart-info__heading cart-info__heading--lv2">
-                                        1. Shipping, arrives between Mon, May 16—Tue, May 24
+                                        1. Vận chuyển 
                                     </h2>
                                 </div>
 
@@ -200,13 +200,13 @@
                                 
                                 <form id="form-submit" class="cart-info" method="POST" target="_blank" enctype="application/x-www-form-urlencoded" action="./view/handle_payment.php" data-user="<?php echo $_SESSION["email"] ?>">
                                     <div class="cart-info__row">
-                                        <span>Tổng phụ <label class="cart-info__sub-label">(iteams )</label></span>
+                                        <span>Tổng số  <label class="cart-info__sub-label">sản phẩm </label></span>
                                         <span><?php echo $countOrders; ?></span>
                                         
                                     </div>
                                     <div class="cart-info__row">
-                                        <span>Giá tiền  <span class="cart-info__sub-label">(Total)</span></span>
-                                        <span>VND
+                                        <span>Giá tiền  <span class="cart-info__sub-label"></span></span>
+                                        <span>$
                                         <?php
                                                 echo $subTotal + 3;
                                             ?>
@@ -225,7 +225,7 @@
                                     <input type="text" name="userId" value="<?php echo $userId; ?>">
                                     <input type="text" name="status" value="1">
                                     <input type="text" name="address" value="<?php  echo $address; ?>">
-                                        <input type="submit" class="cart-info__next-btn btn btn--primary btn--rounded" value="Pay $<?php
+                                        <input type="submit" class="cart-info__next-btn btn btn--primary btn--rounded" value="Thanh toán         $<?php
                                                 echo $subTotal + 3;
                                             ?>" name="payment">
                                 </form>

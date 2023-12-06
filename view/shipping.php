@@ -100,7 +100,7 @@
                                                                     toggle-target="#add-new-address"
                                                                 >
                                                                     <img class="icon" src="./assets/icons/edit.svg" alt="" />
-                                                                    Edit
+                                                                    Sửa
                                                                 </button>
                                                             </div>
                                                         </div>

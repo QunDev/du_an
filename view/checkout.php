@@ -67,7 +67,7 @@
                                                                 </a>
                                                             </h3>
                                                             <p class="cart-item__price-wrap">
-                                                                $'.$unitPrice.' | <span class="cart-item__status">In Stock</span>
+                                                                $'.$unitPrice.' | <span class="cart-item__status">Còn hàng </span>
                                                             </p>
                                                             <div class="cart-item__ctrl cart-item__ctrl--md-block">
                                                                 <div class="cart-item__input">
@@ -94,14 +94,14 @@
                                                             <div class="cart-item__ctrl">
                                                                 <button class="cart-item__ctrl-btn">
                                                                     <img src="./assets/icons/heart-2.svg" alt="" />
-                                                                    Save
+                                                                   Yêu thích 
                                                                 </button>
                                                                 <button
                                                                     class="cart-item__ctrl-btn js-toggle"
                                                                     toggle-target="#delete-confirm"
                                                                 >
                                                                     <img src="./assets/icons/trash.svg" alt="" />
-                                                                    Delete
+                                                                    Xóa
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -151,12 +151,12 @@
                         <div class="col-4 col-xl-12">
                             <div class="cart-info">
                                 <div class="cart-info__row">
-                                    <span>Tổng thu <span class="cart-info__sub-label">(items)</span></span>
+                                    <span>Số lượng  <span class="cart-info__sub-label">sản phẩm </span></span>
                                     <span><?php echo $countOrders; ?></span>
                                 </div>
                                 <div class="cart-info__row">
-                                    <span>Giá <span class="cart-info__sub-label">(Total)</span></span>
-                                    <span>VND
+                                    <span>Giá <span class="cart-info__sub-label"></span></span>
+                                    <span>$
                                         <?php
                                             echo $subTotal + 3;
                                         ?>
@@ -165,7 +165,7 @@
                                 <div class="cart-info__separate"></div>
                                 <div class="cart-info__row">
                                     <span>Tổng tiền </span>
-                                    <span>VND
+                                    <span>$
                                         <?php
                                             echo $subTotal + 3;
                                         ?>

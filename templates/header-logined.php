@@ -27,13 +27,13 @@
 
             <a href="./checkout.html" class="nav-btn d-none d-md-flex">
                 <img src="./assets/icons/buy.svg" alt="" class="nav-btn__icon icon" />
-                <span class="nav-btn__title">Cart</span>
+                <span class="nav-btn__title">Giỏ hàng </span>
                 <span class="nav-btn__qnt">3</span>
             </a>
 
             <a href="#!" class="nav-btn d-none d-md-flex">
                 <img src="./assets/icons/heart.svg" alt="" class="nav-btn__icon icon" />
-                <span class="nav-btn__title">Favorite</span>
+                <span class="nav-btn__title">Yêu thích </span>
                 <span class="nav-btn__qnt">3</span>
             </a>
 
@@ -61,8 +61,8 @@
                         <div class="act-dropdown__inner">
                             <img src="./assets/icons/arrow-up.png" alt="" class="act-dropdown__arrow" />
                             <div class="act-dropdown__top">
-                                <h2 class="act-dropdown__title">You have 3 item(s)</h2>
-                                <a href="./favourite.html" class="act-dropdown__view-all">See All</a>
+                                <h2 class="act-dropdown__title">Bạn có 3 sản phẩm </h2>
+                                <a href="./favourite.html" class="act-dropdown__view-all">Xem tất cả</a>
                             </div>
                             <div class="row row-cols-3 gx-2 act-dropdown__list">
                                 <!-- Cart preview item 1 -->
@@ -105,7 +105,7 @@
                             <div class="act-dropdown__checkout">
                                 <a href="./?act=checkout"
                                     class="btn btn--primary btn--rounded act-dropdown__checkout-btn">
-                                    Check Out All
+                                   Kiểm tra tất cả
                                 </a>
                             </div>
                         </div>
@@ -125,8 +125,8 @@
                         <div class="act-dropdown__inner">
                             <img src="./assets/icons/arrow-up.png" alt="" class="act-dropdown__arrow" />
                             <div class="act-dropdown__top">
-                                <h2 class="act-dropdown__title">You have 3 item(s)</h2>
-                                <a href="./?act=checkout" class="act-dropdown__view-all">See All</a>
+                                <h2 class="act-dropdown__title">Bạn có 3 sản phẩm </h2>
+                                <a href="./?act=checkout" class="act-dropdown__view-all">Xem tất cả</a>
                             </div>
                             <div class="row row-cols-3 gx-2 act-dropdown__list">
                                 <!-- Cart preview item 1 -->
@@ -167,26 +167,26 @@
                             </div>
                             <div class="act-dropdown__bottom">
                                 <div class="act-dropdown__row">
-                                    <span class="act-dropdown__label">Subtotal</span>
+                                    <span class="act-dropdown__label">Tổng Thu </span>
                                     <span class="act-dropdown__value">$415.99</span>
                                 </div>
                                 <div class="act-dropdown__row">
-                                    <span class="act-dropdown__label">Texes</span>
-                                    <span class="act-dropdown__value">Free</span>
+                                    <span class="act-dropdown__label">Thuế </span>
+                                    <span class="act-dropdown__value">Miên phí </span>
                                 </div>
                                 <div class="act-dropdown__row">
-                                    <span class="act-dropdown__label">Shipping</span>
+                                    <span class="act-dropdown__label">Phí vận chuyển </span>
                                     <span class="act-dropdown__value">$10.00</span>
                                 </div>
                                 <div class="act-dropdown__row act-dropdown__row--bold">
-                                    <span class="act-dropdown__label">Total Price</span>
+                                    <span class="act-dropdown__label">Tổng tiền </span>
                                     <span class="act-dropdown__value">$425.99</span>
                                 </div>
                             </div>
                             <div class="act-dropdown__checkout">
                                 <a href="./?act=checkout"
                                     class="btn btn--primary btn--rounded act-dropdown__checkout-btn">
-                                    Check Out All
+                                   Kiểm tra tât cả 
                                 </a>
                             </div>
                         </div>
@@ -213,22 +213,22 @@
 
                         <ul class="user-menu__list">
                             <li>
-                                <a href="./profile.html" class="user-menu__link">Profile</a>
+                                <a href="./profile.html" class="user-menu__link">Thông tin các nhân </a>
                             </li>
                             <li>
-                                <a href="./favourite.html" class="user-menu__link">Favourite list</a>
+                                <a href="./favourite.html" class="user-menu__link">Danh sách yêu thích </a>
                             </li>
                             <li class="user-menu__separate">
                                 <a href="#!" class="user-menu__link" id="switch-theme-btn">
-                                    <span>Dark mode</span>
+                                    <span>Chế độ tối </span>
                                     <img src="./assets/icons/sun.svg" alt="" class="icon user-menu__icon" />
                                 </a>
                             </li>
                             <li>
-                                <a href="#!" class="user-menu__link">Settings</a>
+                                <a href="#!" class="user-menu__link">Cài đặt </a>
                             </li>
                             <li class="user-menu__separate">
-                                <a href="./?act=logOut" class="user-menu__link">Logout</a>
+                                <a href="./?act=logOut" class="user-menu__link">Đăng xuất </a>
                             </li>
                         </ul>
                     </div>
