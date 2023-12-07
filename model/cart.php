@@ -69,10 +69,11 @@
 
 // Lấy sản phẩm đã thanh toán
     function getAllByIdBuy() {
-        $sql = "select b.buyId, b.buyDate, b.isCompleted, b.paymentMethod, b.totalAmount, b.quantityProduct, p.productName, s.shippingAddressId, p.imageURL, s.address, s.phone, s.name FROM `buy` as b 
+        $sql = "select b.buyId, b.buyDate, b.isCompleted, b.paymentMethod, b.totalAmount, b.quantityProduct, p.productName, s.shippingAddressId, p.imageURL, s.address, s.phone, s.name, so.status FROM `buy` as b 
         INNER JOIN products as p on p.productID = b.productId
         INNER JOIN user as u on u.userID = b.userId
-        INNER JOIN shippingAddress as s on s.shippingAddressId = b.shippingAddress";
+        INNER JOIN shippingAddress as s on s.shippingAddressId = b.shippingAddress
+        INNER JOIN statusorder as so on b.isCompleted = so.statusOrderId";
         return pdo_query($sql);
     }
 
@@ -80,16 +81,17 @@
         $sql = "select b.buyId, b.buyDate, b.paymentMethod, b.totalAmount, b.quantityProduct, p.productName, p.imageURL, so.status as isCompleted FROM `buy` as b 
         INNER JOIN products as p on p.productID = b.productId
         INNER JOIN user as u on u.userID = b.userId
-        INNER JOIN statusoder as so on b.isCompleted = so.statusOrderId
-        where b.userId =".$id;
+        INNER JOIN statusorder as so on b.isCompleted = so.statusOrderId
+        where b.userID =".$id;
         return pdo_query($sql);
     }
 
     function getByIdBuy($id) {
-        $sql = "select b.buyId, b.buyDate, b.isCompleted, b.paymentMethod, b.totalAmount, b.quantityProduct, p.productName, s.shippingAddressId, p.imageURL, s.address, s.phone, s.name FROM `buy` as b 
+        $sql = "select b.buyId, b.buyDate, b.paymentMethod, b.totalAmount, b.quantityProduct, p.productName, s.shippingAddressId, p.imageURL, s.address, s.phone, s.name, so.status as isCompleted FROM `buy` as b 
         INNER JOIN products as p on p.productID = b.productId
         INNER JOIN user as u on u.userID = b.userId
         INNER JOIN shippingAddress as s on s.shippingAddressId = b.shippingAddress
+        INNER JOIN statusorder as so on b.isCompleted = so.statusOrderId
         where b.buyId = ".$id;
         return pdo_query($sql);
     }
@@ -114,4 +116,12 @@
         pdo_execute($sql);
         
     }
+
+// Cập nhật trạng thái
+    function updateStatus($id, $idS) {
+        $sql = "update `buy` SET `isCompleted`='".$idS."' WHERE buyId =".$id;
+        pdo_execute($sql);
+    }
+
+
 ?>

@@ -20,12 +20,12 @@
                     <ul class="breadcrumbs checkout-page__breadcrumbs">
                         <li>
                             <a href="./" class="breadcrumbs__link">
-                                Home
+                                Trang chủ 
                                 <img src="./assets/icons/arrow-right.svg" alt="" />
                             </a>
                         </li>
                         <li>
-                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Checkout</a>
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Giỏ hàng</a>
                         </li>
                     </ul>
                 </div>
@@ -68,7 +68,7 @@
                                                                 </a>
                                                             </h3>
                                                             <p class="cart-item__price-wrap">
-                                                                $'.$unitPrice.' | <span class="cart-item__status">In Stock</span>
+                                                                $'.$unitPrice.' | <span class="cart-item__status">Còn hàng</span>
                                                             </p>
                                                             <div class="cart-item__ctrl cart-item__ctrl--md-block">
                                                                 <div class="cart-item__input">
@@ -95,14 +95,14 @@
                                                             <div class="cart-item__ctrl">
                                                                 <button class="cart-item__ctrl-btn">
                                                                     <img src="./assets/icons/heart-2.svg" alt="" />
-                                                                    Save
+                                                                    Yêu thích
                                                                 </button>
                                                                 <button
                                                                     class="cart-item__ctrl-btn js-toggle"
                                                                     toggle-target="#delete-confirm"
                                                                 >
                                                                     <img src="./assets/icons/trash.svg" alt="" />
-                                                                    Delete
+                                                                    Xóa
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -122,27 +122,27 @@
                                                         src="./assets/icons/arrow-down-2.svg"
                                                         alt=""
                                                     />
-                                                    Continue Shopping
+                                                    Tiếp tục mua sản phẩm
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="col-4 col-xxl-5">
                                             <div class="cart-info__row">
-                                                <span>Subtotal:</span>
+                                                <span>Tổng giá:</span>
                                                 <span><?php
                                                     echo $subTotal;
                                                 ?>d</span>
                                             </div>
                                             <div class="cart-info__row">
-                                                <span>Shipping:</span>
-                                                <span>$3</span>
+                                                <span>Ship:</span>
+                                                <span>30000d</span>
                                             </div>
                                             <div class="cart-info__separate"></div>
                                             <div class="cart-info__row cart-info__row--bold">
-                                                <span>Total:</span>
-                                                <span>$<?php
-                                                    echo $subTotal + 3;
-                                                ?></span>
+                                                <span>Thanh toán:</span>
+                                                <span><?php
+                                                    echo $subTotal + 30000;
+                                                ?>d</span>
                                             </div>
                                         </div>
                                     </div>
@@ -152,28 +152,28 @@
                         <div class="col-4 col-xl-12">
                             <div class="cart-info">
                                 <div class="cart-info__row">
-                                    <span>Subtotal <span class="cart-info__sub-label">(items)</span></span>
+                                    <span>Tổng <span class="cart-info__sub-label">(mặt hàng)</span></span>
                                     <span><?php echo $countOrders; ?></span>
                                 </div>
                                 <div class="cart-info__row">
-                                    <span>Price <span class="cart-info__sub-label">(Total)</span></span>
-                                    <span>$
+                                    <span>Tổng <span class="cart-info__sub-label">(giá)</span></span>
+                                    <span>
                                         <?php
-                                            echo $subTotal + 3;
-                                        ?>
+                                            echo $subTotal + 30000;
+                                        ?>d
                                     </span>
                                 </div>
                                 <div class="cart-info__separate"></div>
                                 <div class="cart-info__row">
-                                    <span>Estimated Total</span>
-                                    <span>$
+                                    <span>Tổng số ước tính</span>
+                                    <span>
                                         <?php
-                                            echo $subTotal + 3;
-                                        ?>
+                                            echo $subTotal + 30000;
+                                        ?>d
                                     </span>
                                 </div>
                                 <a href="./?act=shipping" class="cart-info__next-btn btn btn--primary btn--rounded" id="nextURL" data-count="<?php echo $countOrders; ?>">
-                                    Continue to checkout
+                                    Tiếp tục
                                 </a>
                             </div>
                             <div class="cart-info">
@@ -183,9 +183,9 @@
                                             <img src="./assets/icons/gift.svg" alt="" class="gift-item__icon" />
                                         </div>
                                         <div class="gift-item__content">
-                                            <h3 class="gift-item__title">Send this order as a gift.</h3>
+                                            <h3 class="gift-item__title">Gửi đơn đặt hàng này như một món quà.</h3>
                                             <p class="gift-item__desc">
-                                                Available items will be shipped to your gift recipient.
+                                                Các mặt hàng có sẵn sẽ được chuyển đến người nhận quà của bạn.
                                             </p>
                                         </div>
                                     </article>
@@ -206,10 +206,10 @@
         <!-- Modal: confirm remove shopping cart item -->
         <div id="delete-confirm" class="modal modal--small hide">
             <div class="modal__content">
-                <p class="modal__text">Do you want to remove this item from shopping cart?</p>
+                <p class="modal__text">Bạn có muốn xóa mặt hàng này khỏi giỏ hàng không?</p>
                 <div class="modal__bottom">
                     <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">
-                        Cancel
+                        Trở về
                     </button>
                     <button
                         class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin js-toggle"
@@ -217,7 +217,7 @@
                         id="delete"
                         type="button"
                     >
-                        Delete
+                        Xóa
                     </button>
                 </div>
             </div>

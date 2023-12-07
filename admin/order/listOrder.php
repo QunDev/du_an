@@ -70,11 +70,8 @@
     border-right: none;
   }
 </style>
-<div class="rows">
-  <a href="index.php?act=formCreateProduct"><button class="btn">Thêm mới </button></a>
-</div>
 
- <p><Strong> Bảng Danh Mục </Strong></p>
+ <p><Strong> Bảng đơn hàng </Strong></p>
  <br>
  <br>
 
@@ -124,7 +121,6 @@
           <th>Địa chỉ người nhận</th>
           <th>Số điện thoại người nhận</th>
           <th>Trạng thái</th>
-          <th>Hành Động </th>
           
         </tr>
       </thead>
@@ -149,15 +145,11 @@
                     <td> '.$phone.' </td>
                     <td> 
                         <select name="status" id="status" data-id="'.$buyId.'">
-                            <option value="1" selected hidden>'.$isCompleted.'</option>
+                            <option value="'.$isCompleted.'" hidden>'.$status.'</option>
                             <option value="2">Đang chuẩn bị hàng</option>
                             <option value="3">Đơn hàng đã được giao</option>
                             <option value="4">Đơn hàng đã hủy</option>
                         </select>
-                    </td>
-                    <td>
-                        <button class="thinhdeptrai"><a href="./?act=loadOneProduct&id='.$productID.'">Update</a></button>
-                        <button class="btnDelete" data-id="'.$productID.'">Delete</button>
                     </td>
                     </tr>';
           

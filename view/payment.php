@@ -2,7 +2,8 @@
     $subTotal = 0;
     foreach ($dataOrderDetial as $data) {
         extract($data);
-        $subTotal += $subtotal * $quantity;
+        $totalM = $unitPrice * $quantity;
+        $subTotal += $totalM; 
     }
 ?>
 
@@ -24,24 +25,24 @@
                     <ul class="breadcrumbs checkout-page__breadcrumbs">
                         <li>
                             <a href="./" class="breadcrumbs__link">
-                                Home
+                                Trang chủ
                                 <img src="./assets/icons/arrow-right.svg" alt="" />
                             </a>
                         </li>
                         <li>
                             <a href="./?act=checkout" class="breadcrumbs__link">
-                                Checkout
+                                Giỏ hàng
                                 <img src="./assets/icons/arrow-right.svg" alt="" />
                             </a>
                         </li>
                         <li>
                             <a href="./?act=shipping" class="breadcrumbs__link">
-                                Shipping
+                                Địa chỉ
                                 <img src="./assets/icons/arrow-right.svg" alt="" />
                             </a>
                         </li>
                         <li>
-                            <a href="./?act=payment" class="breadcrumbs__link breadcrumbs__link--current">Payment method</a>
+                            <a href="./?act=payment" class="breadcrumbs__link breadcrumbs__link--current">Phương thức thanh toán </a>
                         </li>
                     </ul>
                 </div>
@@ -53,7 +54,7 @@
                             <div class="cart-info">
                                 <div class="cart-info__top">
                                     <h2 class="cart-info__heading cart-info__heading--lv2">
-                                        1. Shipping, arrives between Mon, May 16—Tue, May 24
+                                        1. Vận chuyển
                                     </h2>
                                 </div>
 
@@ -78,9 +79,9 @@
                             <!--  -->
 
                             <div class="cart-info">
-                                <h2 class="cart-info__heading cart-info__heading--lv2">2. Payment method</h2>
+                                <h2 class="cart-info__heading cart-info__heading--lv2">2. Phương thức thanh toán</h2>
                                 <div class="cart-info__separate"></div>
-                                <h3 class="cart-info__sub-heading">Payment method</h3>
+                                <h3 class="cart-info__sub-heading">Phương thức thanh toán</h3>
 
                                 <!-- Payment item 3 -->
                                 <label>
@@ -117,7 +118,7 @@
                                         />
                                         <div class="payment-item__content">
                                             <div class="payment-item__info">
-                                                <h3 class="payment-item__title">Cash</h3>
+                                                <h3 class="payment-item__title">Thanh toán khi nhận hàng</h3>
                                             </div>
 
                                             <span class="cart-info__checkbox payment-item__checkbox">
@@ -135,14 +136,14 @@
                         </div>
                         <div class="col-4 col-xl-4 col-lg-12">
                             <div class="cart-info">
-                                <h2 class="cart-info__heading cart-info__heading--lv2">Payment Details</h2>
+                                <h2 class="cart-info__heading cart-info__heading--lv2">Chi tiết thanh toán</h2>
                                 <p class="cart-info__desc">
-                                    Complete your purchase item by providing your payment details order.
+                                    Hoàn thành đơn hàng của bạn
                                 </p>
                                 
-                                <form id="form-submit" class="cart-info" method="POST" target="_blank" enctype="application/x-www-form-urlencoded" action="./view/handle_payment.php" data-user="<?php echo $_SESSION["email"] ?>">
+                                <form id="form-submit" class="cart-info" method="POST" target="_blank" enctype="application/x-www-form-urlencoded" action="" data-user="<?php echo $_SESSION["email"] ?>">
                                     <div class="cart-info__row">
-                                        <span>Subtotal <label class="cart-info__sub-label">(items)</label></span>
+                                        <span>Tổng <label class="cart-info__sub-label">(mặt hàng)</label></span>
                                         <span><?php echo $countOrders; ?></span>
                                         
                                     </div>
@@ -153,27 +154,27 @@
                                     </div>
 
                                     <div class="cart-info__row">
-                                        <span>Price <span class="cart-info__sub-label">(Total)</span></span>
-                                        <span>$
+                                        <span>Tổng <span class="cart-info__sub-label">(Giá)</span></span>
+                                        <span>
                                         <?php
                                                 echo $subTotal + 30000;
-                                            ?>
+                                            ?>d
                                         </span>
                                     </div>
                                     <div class="cart-info__separate"></div>
                                     <div class="cart-info__row">
-                                        <span>Estimated Total</span>
-                                        <span>$<?php
+                                        <span>Tổng thanh toán</span>
+                                        <span><?php
                                                 echo $subTotal + 30000;
-                                            ?></span>
+                                            ?>d</span>
                                     </div>
                                     <input type="text" name="price" value="<?php echo $subTotal + 30000; ?>" hidden>
                                     <input type="text" name="userId" value="<?php echo $userId; ?>" hidden>
                                     <input type="text" name="status" value="1" hidden>
-                                    <input type="text" name="address" value="<?php  echo $shippingAddressId; ?>" >
-                                        <input type="submit" class="cart-info__next-btn btn btn--primary btn--rounded" value="Pay $<?php
+                                    <input type="text" name="address" value="<?php  echo $shippingAddressId; ?>" hidden>
+                                        <input type="submit" class="cart-info__next-btn btn btn--primary btn--rounded" value="Thanh toán <?php
                                                 echo $subTotal + 30000;
-                                            ?>" name="payment">
+                                            ?>d" name="payment" id="btn-payment">
                                 </form>
                             <div class="cart-info">
                                 <a href="#!">
@@ -182,9 +183,9 @@
                                             <img src="./assets/icons/gift.svg" alt="" class="gift-item__icon" />
                                         </div>
                                         <div class="gift-item__content">
-                                            <h3 class="gift-item__title">Send this order as a gift.</h3>
+                                            <h3 class="gift-item__title">Gửi đơn đặt hàng này như một món quà.</h3>
                                             <p class="gift-item__desc">
-                                                Available items will be shipped to your gift recipient.
+                                            Các mặt hàng có sẵn sẽ được chuyển đến người nhận quà của bạn.
                                             </p>
                                         </div>
                                     </article>

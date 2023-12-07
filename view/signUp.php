@@ -22,7 +22,7 @@
                         <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
                         <h1 class="logo__title">grocerymart</h1>
                     </a>
-                    <h1 class="auth__heading">Đăng Nhập</h1>
+                    <h1 class="auth__heading">Xin chào</h1>
                     <p class="auth__desc">Hãy tạo tài khoản và cùng nhau trải nghiệm mua sắm thôi.</p>
                     <form action="./?act=checkSignUp" class="form auth__form" method="post">
                         <div class="form__group">
@@ -76,11 +76,11 @@
                         <div class="form__group form__group--inline">
                             <label class="form__checkbox">
                                 <input type="checkbox" name="checkbox" id="checkbox" class="form__checkbox-input d-none" />
-                                <span class="form__checkbox-label">đặt làm thẻ</span>
+                                <span class="form__checkbox-label">Nhớ mật khẩu</span>
                             </label>
                         </div>
                         <div class="form__group auth__btn-group">
-                            <button class="btn btn--primary auth__btn form__submit-btn">Đăng Nhập</button>
+                            <button class="btn btn--primary auth__btn form__submit-btn">Đăng kí</button>
                             <button class="btn btn--outline auth__btn btn--no-margin">
                                 <img src="./assets/icons/google.svg" alt="" class="btn__icon icon" />
                                 Đăng nhập với Google
@@ -90,7 +90,7 @@
 
                     <p class="auth__text">
                         Bạn có tải khoản ?
-                        <a href="./?act=signIn" class="auth__link auth__text-link">Đăng kí</a>
+                        <a href="./?act=signIn" class="auth__link auth__text-link">Đăng nhập</a>
                     </p>
                 </div>
             </div>

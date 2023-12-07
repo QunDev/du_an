@@ -45,7 +45,7 @@
                             echo '
                                 <li>
                                 <a href="./" class="breadcrumbs__link">
-                                    Home
+                                    Trang chủ
                                     <img src="./assets/icons/arrow-right.svg" alt="" />
                                 </a>
                                 </li>
@@ -106,9 +106,9 @@
                                         <div class="col-5 col-xxl-6 col-xl-12">
                                             <div class="prod-prop">
                                                 <img src="./assets/icons/star.svg" alt="" class="prod-prop__icon" />
-                                                <h4 class="prod-prop__title">(3.5) 1100 reviews</h4>
+                                                <h4 class="prod-prop__title">(3.5) 1100 Nhận xét</h4>
                                             </div>
-                                            <label for="" class="form__label prod-info__label">Size/Weight</label>
+                                            <label for="" class="form__label prod-info__label">Kích cỡ/Khối lượng</label>
                                             <div class="filter__form-group">
                                                 <div class="form__select-wrap">
                                                     <div class="form__select" style="--width: 146px">
@@ -131,9 +131,9 @@
                                             </div>
                                             <div class="filter__form-group">
                                                 <div class="form__tags">
-                                                    <button class="form__tag prod-info__tag">Small</button>
-                                                    <button class="form__tag prod-info__tag">Medium</button>
-                                                    <button class="form__tag prod-info__tag">Large</button>
+                                                    <button class="form__tag prod-info__tag">Nhỏ</button>
+                                                    <button class="form__tag prod-info__tag">Trung bình</button>
+                                                    <button class="form__tag prod-info__tag">Lớn</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -145,7 +145,7 @@
                                                         alt=""
                                                         class="prod-prop__icon icon"
                                                     />
-                                                    <h4 class="prod-prop__title">Compare</h4>
+                                                    <h4 class="prod-prop__title">Hot</h4>
                                                 </div>
                                                 <div class="prod-prop">
                                                     <img
@@ -154,8 +154,8 @@
                                                         class="prod-prop__icon icon"
                                                     />
                                                     <div>
-                                                        <h4 class="prod-prop__title">Delivery</h4>
-                                                        <p class="prod-prop__desc">From $6 for 1-3 days</p>
+                                                        <h4 class="prod-prop__title">Vận chuyển</h4>
+                                                        <p class="prod-prop__desc">Từ 1-3 ngày</p>
                                                     </div>
                                                 </div>
                                                 <div class="prod-prop">
@@ -165,19 +165,18 @@
                                                         class="prod-prop__icon icon"
                                                     />
                                                     <div>
-                                                        <h4 class="prod-prop__title">Pickup</h4>
-                                                        <p class="prod-prop__desc">Out of 2 store, today</p>
+                                                        <h4 class="prod-prop__title">Đặt hàng trực tuyến</h4>
                                                     </div>
                                                 </div>
                                                 <div class="prod-info__card">
                                                     <div class="prod-info__row">
-                                                        <span class="prod-info__price">$<?php echo $price ?></span>
+                                                        <span class="prod-info__price"><?php echo $price ?>d</span>
                                                         <span class="prod-info__tax">10%</span>
                                                     </div>
-                                                    <p class="prod-info__total-price">$<?php echo $price/100*10 + $price ?></p>
+                                                    <p class="prod-info__total-price"><?php echo $price/100*10 + $price ?>d</p>
                                                     <div class="prod-info__row">
                                                         <button class="btn btn--primary prod-info__add-to-cart" type="submit">
-                                                            Add to cart
+                                                            Thêm vào giỏ hàng
                                                         </button>
                                                         <button class="like-btn prod-info__like-btn">
                                                             <img
@@ -206,9 +205,9 @@
                 <div class="product-container">
                     <div class="prod-tab js-tabs">
                         <ul class="prod-tab__list">
-                            <li class="prod-tab__item prod-tab__item--current">Description</li>
-                            <li class="prod-tab__item">Review (1100)</li>
-                            <li class="prod-tab__item">Similar</li>
+                            <li class="prod-tab__item prod-tab__item--current">Mô tả</li>
+                            <li class="prod-tab__item">Nhận xét (1100)</li>
+                            <li class="prod-tab__item">Sản phẩm tương tự</li>
                         </ul>
                         <div class="prod-tab__contents">
                             <div class="prod-tab__content prod-tab__content--current">
@@ -224,7 +223,7 @@
                             </div>
                             <div class="prod-tab__content">
                                 <div class="prod-content">
-                                    <h2 class="prod-content__heading">What our customers are saying</h2>
+                                    <h2 class="prod-content__heading">Một số nhận xét</h2>
                                     <div class="row row-cols-3 gx-lg-2 row-cols-md-1 gy-md-3">
                                         <!-- Review card 1 -->
                                         <div class="col">
@@ -270,7 +269,7 @@
                                                             class="review-card__star"
                                                         />
                                                     </div>
-                                                    <span class="review-card__rating-title">(3.5) Review</span>
+                                                    <span class="review-card__rating-title">(3.5)</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -319,7 +318,7 @@
                                                             class="review-card__star"
                                                         />
                                                     </div>
-                                                    <span class="review-card__rating-title">(3.5) Review</span>
+                                                    <span class="review-card__rating-title">(3.5)</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -368,7 +367,7 @@
                                                             class="review-card__star"
                                                         />
                                                     </div>
-                                                    <span class="review-card__rating-title">(3.5) Review</span>
+                                                    <span class="review-card__rating-title">(3.5) </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -377,7 +376,7 @@
                             </div>
                             <div class="prod-tab__content">
                                 <div class="prod-content">
-                                    <h2 class="prod-content__heading">Similar items you might like</h2>
+                                    <h2 class="prod-content__heading">Các mặt hàng tương tự bạn có thể thích</h2>
                                     <div
                                         class="row row-cols-6 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-2"
                                     >

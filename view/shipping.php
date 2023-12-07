@@ -2,7 +2,8 @@
     $subTotal = 0;
     foreach ($dataOrderDetial as $data) {
         extract($data);
-        $subTotal += $subtotal * $quantity;
+        $totalM = $unitPrice * $quantity;
+        $subTotal += $totalM; 
     }
 ?>
 
@@ -30,7 +31,7 @@
                         </li>
                         <li>
                             <a href="./?act=checkout" class="breadcrumbs__link">
-                                Thanh toán 
+                                Giỏ hàng 
                                 <img src="./assets/icons/arrow-right.svg" alt="" />
                             </a>
                         </li>
@@ -81,7 +82,7 @@
                                                                     <input
                                                                         type="radio"
                                                                         name="shipping-adress"
-                                                                        checked
+                                                                        
                                                                         class="cart-info__checkbox-input"
                                                                         id="shipping-adress"
                                                                         data-idAddress="'.$shippingAddressId.'"
@@ -94,8 +95,7 @@
                                                                     '.$address.'
                                                                 </p>
                                                                 <ul class="address-card__list">
-                                                                    <li class="address-card__list-item">Shipping</li>
-                                                                    <li class="address-card__list-item">Delivery from store</li>
+                                                                    <li class="address-card__list-item">Giao hàng từ cửa hàng</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -106,7 +106,7 @@
                                                                     toggle-target="#add-new-address"
                                                                 >
                                                                     <img class="icon" src="./assets/icons/edit.svg" alt="" />
-                                                                    Edit
+                                                                    Sửa
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -142,15 +142,11 @@
                         <div class="col-4 col-xl-12">
                             <div class="cart-info">
                                 <div class="cart-info__row">
-                                    <span>Tổng <span class="cart-info__sub-label">(Sản phẩm)</span></span>
+                                    <span>Tổng <span class="cart-info__sub-label">(Mặt hàng)</span></span>
                                     <span><?php echo $countOrders; ?></span>
                                 </div>
                                 <div class="cart-info__row">
-                                    <span>Ship <span class="cart-info__sub-label"></span></span>
-                                    <span>30.000d</span>
-                                </div>
-                                <div class="cart-info__row">
-                                    <span>Price <span class="cart-info__sub-label">(Tổng)</span></span>
+                                    <span>Tổng <span class="cart-info__sub-label">(giá)</span></span>
                                     <span>
                                     <?php
                                             echo $subTotal + 30000;
@@ -159,10 +155,10 @@
                                 </div>
                                 <div class="cart-info__separate"></div>
                                 <div class="cart-info__row">
-                                    <span>Tổng phải trả</span>
-                                    <span>$<?php
+                                    <span>Tổng số ước tính</span>
+                                    <span><?php
                                             echo $subTotal + 30000;
-                                        ?></span>
+                                        ?>d</span>
                                 </div>
                                 <a href="./?act=payment" class="cart-info__next-btn btn btn--primary btn--rounded" id="nextURL">
                                     Tiếp tục thanh toán
@@ -175,9 +171,9 @@
                                             <img src="./assets/icons/gift.svg" alt="" class="gift-item__icon" />
                                         </div>
                                         <div class="gift-item__content">
-                                            <h3 class="gift-item__title">Send this order as a gift.</h3>
+                                            <h3 class="gift-item__title">Gửi đơn đặt hàng này như một món quà.</h3>
                                             <p class="gift-item__desc">
-                                                Available items will be shipped to your gift recipient.
+                                            Các mặt hàng có sẵn sẽ được chuyển đến người nhận quà của bạn.
                                             </p>
                                         </div>
                                     </article>
@@ -218,11 +214,11 @@
         <div id="add-new-address" class="modal hide" style="--content-width: 650px">
             <div class="modal__content">
                 <form action="addShippingAddress" class="form" method="post">
-                    <h2 class="modal__heading">Add new shipping address</h2>
+                    <h2 class="modal__heading">Thêm địa chỉ mới</h2>
                     <div class="modal__body">
                         <div class="form__row">
                             <div class="form__group">
-                                <label for="name" class="form__label form__label--small">Name</label>
+                                <label for="name" class="form__label form__label--small">Tên người nhận hàng</label>
                                 <div class="form__text-input form__text-input--small">
                                     <input
                                         type="text"
@@ -235,10 +231,10 @@
                                     />
                                     <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                                 </div>
-                                <p class="form__error">Name must be at least 2 characters</p>
+                                <p class="form__error">Tên ít nhất có 2 kí tự</p>
                             </div>
                             <div class="form__group">
-                                <label for="phone" class="form__label form__label--small">Phone</label>
+                                <label for="phone" class="form__label form__label--small">Số điện thoại người nhận</label>
                                 <div class="form__text-input form__text-input--small">
                                     <input
                                         type="tel"
@@ -251,11 +247,11 @@
                                     />
                                     <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                                 </div>
-                                <p class="form__error">Phone must be at least 10 characters</p>
+                                <p class="form__error">Điện thoại phải có ít nhất 10 ký tự</p>
                             </div>
                         </div>
                         <div class="form__group">
-                            <label for="address" class="form__label form__label--small">Address</label>
+                            <label for="address" class="form__label form__label--small">Địa chỉ người nhận</label>
                             <div class="form__text-area">
                                 <textarea
                                     name="address"
@@ -266,18 +262,18 @@
                                 ></textarea>
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                             </div>
-                            <p class="form__error">Address not empty</p>
+                            <p class="form__error">Địa chỉ không được để trống</p>
                         </div>
                         <div class="form__group form__group--inline">
                             <label class="form__checkbox">
                                 <input type="checkbox" name="" id="" class="form__checkbox-input d-none" />
-                                <span class="form__checkbox-label">Set as default address</span>
+                                <span class="form__checkbox-label">Đặt địa chỉ mặc định</span>
                             </label>
                         </div>
                     </div>
                     <div class="modal__bottom">
                         <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">
-                            Cancel
+                            Trở về
                         </button>
                         <button
                             class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle"
@@ -285,7 +281,7 @@
                             id="shippingAddress"
                             data-id="<?php echo $userId ?>"
                         >
-                            Create
+                            Thêm
                         </button>
                     </div>
                 </form>

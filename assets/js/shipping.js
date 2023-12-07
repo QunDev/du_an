@@ -1,7 +1,6 @@
 const btn = document.querySelector("#shippingAddress");
 const next = document.querySelector("#nextURL");
 const input = document.querySelectorAll("#shipping-adress");
-let address = "";
 
 btn.addEventListener("click", () => {
     const valueName = document.querySelector("#name").value;
@@ -13,9 +12,21 @@ btn.addEventListener("click", () => {
     );
 });
 
-input.forEach((e) => {
-    e.addEventListener("click", () => {
-        address = e.dataset.idaddress;
-        next.setAttribute("href", `./?act=payment&id=${address}`);
+let check = 0;
+let address = "";
+input.forEach((i) => {
+    next.addEventListener("click", (e) => {
+        if (check > 0) {
+            next.setAttribute("href", `./?act=payment&id=${address}`);
+        } else {
+            e.preventDefault();
+            alert("Vui lòng chọn địa chỉ.");
+        }
     });
+    i.addEventListener("click", () => {
+        check++;
+        address = i.dataset.idaddress;
+    });
+
+    // e.addEventListener("click", () => {});
 });

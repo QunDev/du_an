@@ -55,11 +55,23 @@
                     </a>
                 </li>
                 <li class="navbar__item">
+                    <a href="./?act=listUser" class="navbar__link">
+                        User
+                        <img src="./assets/icons/arrow-down.svg" alt="" class="icon navbar__arrow" />
+                    </a>
+                </li>
+                <li class="navbar__item">
                     <a href="./?act=order" class="navbar__link">
                         Quản lí đơn hàng
                         <img src="./assets/icons/arrow-down.svg" alt="" class="icon navbar__arrow" />
                     </a>
                 </li>
-        
+                <li class="navbar__item">
+                    <a href="./?act=statistics" class="navbar__link">
+                        Thống kê
+                        <img src="./assets/icons/arrow-down.svg" alt="" class="icon navbar__arrow" />
+                    </a>
+                </li>
+            </ul>
     </div>
 </div>

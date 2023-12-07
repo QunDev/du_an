@@ -6,6 +6,8 @@
     include "../model/products.php";
     include "../model/client.php";
     include "../model/cart.php";
+    include "../model/statisticsModel.php";
+    include "../model/user.php";
 
     
 
@@ -121,7 +123,38 @@
                         $data = getAllByIdBuy();
                         include "./order/listOrder.php";
                         break;
-                    
+                    case 'updateStatus':
+                        $idBuy = $_GET["id"];
+                        $idStatus = $_GET["idStatus"];
+                        updateStatus($idBuy, $idStatus);
+                        $data = getAllByIdBuy();
+                        include "./order/listOrder.php";
+                        break;
+                    case 'statistics':
+                        $dataQuantityProduct = dataDoneOrder();
+                        include "./statistics/statistics.php";
+                        break;
+                    case 'totalAmount':
+                        $dataTotalAmount = dataTotalAmountDoneOrder();
+                        include "./statistics/totalAmount.php";
+                        break;
+                    case 'listUser': 
+                        $data = getAllUser();
+                        include "./user/listUser.php";
+                        break;
+                    case 'updateRole':
+                        $userId = $_GET["id"];
+                        $idRole = $_GET["idRole"];
+                        updateRole($userId, $idRole);
+                        $data = getAllUser();
+                        include "./user/listUser.php";
+                        break;
+                    case 'deleteUser':
+                        $id = $_GET["id"];
+                        delete($id);
+                        $data = getAllUser();
+                        include "./user/listUser.php";
+                        break;
                     default:
                         break;
                 }
@@ -130,5 +163,8 @@
         } else {
             echo "Bạn không có quyền truy cập";
         }
+    }
+    else {
+        echo "Bạn không có quyền truy cập";
     }
 ?>

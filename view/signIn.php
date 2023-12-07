@@ -55,7 +55,7 @@
                         <div class="form__group form__group--inline">
                             <label class="form__checkbox">
                                 <input type="checkbox" name="checkbox" id="checkbox" class="form__checkbox-input d-none" />
-                                <span class="form__checkbox-label">đặt làm thẻ</span>
+                                <span class="form__checkbox-label">Nhớ mặt khẩu</span>
                             </label>
                             <a href="./reset-password.html" class="auth__link form__pull-right"> Quên mật khẩu?</a>
                         </div>
@@ -70,7 +70,7 @@
 
                     <p class="auth__text">
                         Bạn chưa có tài khoản
-                        <a href="./?act=signUp" class="auth__link auth__text-link">Sign Up</a>
+                        <a href="./?act=signUp" class="auth__link auth__text-link">Đăng kí</a>
                     </p>
                 </div>
             </div>
