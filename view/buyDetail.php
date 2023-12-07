@@ -1,4 +1,8 @@
-
+<style>
+    .btnHidden {
+        display: none !important;
+    }
+</style>
 
 <main class="profile">
             <div class="container">
@@ -101,7 +105,7 @@
                                                                     </div>
                                                                     <div >
                                                                         <h3 class="account-info__title">'.$productName.' x '.$quantityProduct.'</h3>
-                                                                        <p class="account-info__desc">'.$isCompleted.'</p>
+                                                                        <p class="account-info__desc" id="dataComplete" data-idcp="'.$cp.'">'.$isCompleted.'</p>
                                                                     </div>
                                                                     <div style="margin-left: 30px">
                                                                         <h3 class="account-info__title">Ngày đặt hàng</h3>
@@ -121,8 +125,10 @@
                                                                     </div>
 
                                                                     <div >
-                                                                        <button class="btn js-toggle" style="color: #000" toggle-target="#update-confirm">Sửa</button>
+                                                                        <button class="btn js-toggle" style="color: #000" toggle-target="#update-confirm" id="btn-update" >Sửa</button>
                                                                     </div>
+
+                                                                    
                                                                     
                                                                 </article>
 
@@ -133,7 +139,7 @@
                                                                     </div>
 
                                                                     <div >
-                                                                        <button class="btn js-toggle" style="color: #000" toggle-target="#update-name">Sửa</button>
+                                                                        <button class="btn js-toggle" style="color: #000" toggle-target="#update-name" id="btn-update">Sửa</button>
                                                                     </div>
                                                                     
                                                                 </article>
@@ -145,9 +151,14 @@
                                                                     </div>
 
                                                                     <div >
-                                                                        <button class="btn js-toggle" style="color: #000" toggle-target="#update-phone">Sửa</button>
+                                                                        <button class="btn js-toggle" style="color: #000" toggle-target="#update-phone" id="btn-update">Sửa</button>
                                                                     </div>
                                                                     
+                                                                </article>
+                                                                <article class="account-info btnHidden" style="margin-top: 16px; display: flex; justify-content: space-around" >
+                                                                    <div >
+                                                                        <button class="btn js-toggle" style="color: #000" toggle-target="#cmt-confirm" id="btn-cmt" >Nhận xét</button>
+                                                                    </div>
                                                                 </article>
                                                             </div>
                                                         </div>
@@ -244,6 +255,88 @@
                 
             </div>
         </div>
+
+        <!-- <div id="" class="modal modal--small hide">
+            <div class="modal__content">
+                <form action="">
+                    <label for="phone">Hãy cho chúng tôi biết cảm nghĩ của bạn về sản phẩm: </label>
+                    <input class="cmt-input" type="text" name="phone" id="phone" style="border: 1px solid while" placeholder="Comment">
+                </form>
+                <div class="js-toggle" toggle-target="#cmt-confirm" class="error"></div>
+                <div class="modal__bottom">
+                    <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#cmt-confirm">
+                        Trở về
+                    </button>
+                    <button
+                        class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin"
+                        toggle-target="#cmt-confirm" 
+                        id="cmt-btn"
+                    >
+                        Gửi
+                    </button>
+                </div>
+                
+            </div>
+        </div> -->
+
+        <div id="cmt-confirm" class="modal hide" style="--content-width: 650px">
+            <div class="modal__content">
+                <form action="cmt" class="form" method="post">
+                    <h2 class="modal__heading">Hãy cho chúng tôi biết ý kiến của bạn</h2>
+                    <div class="modal__body">
+                        
+                    <div class="form__group">
+                                <label for="phone" class="form__label form__label--small"></label>
+                                <div class="form__text-input form__text-input--small">
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        id="phone"
+                                        class="form__input cmt-input"
+                                        required
+                                        minlength="5"
+                                        
+                                        placeholder="test cmt"
+                                    />
+                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                </div>
+                                <p class="form__error">Nhận xét phải có ít nhất 5 ký tự</p>
+                            </div>
+                    </div>
+                    <div class="form__group">
+                                <label for="star" class="form__label form__label--small">Star <img src="./assets/icons/star.svg" alt="" class="product-card__star"></label>
+                                <div class="form__text-input form__text-input--small">
+                                    <input
+                                        type="number"
+                                        name="star"
+                                        id="star"
+                                        placeholder="star"
+                                        class="form__input"
+                                        required
+                                        minlength="1"
+                                    />
+                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                </div>
+                                <p class="form__error">Đánh giá phải 1 số</p>
+                            </div>
+                            <input type="text" value="<?php echo $productID ?>" hidden id="idP">
+                    <div class="modal__bottom">
+                        <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#cmt-confirm">
+                            Trở về
+                        </button>
+                        <button
+                            class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle"
+                            toggle-target="#cmt-confirm"
+                            id="cmt-btn"
+                        >
+                            Gửi
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal__overlay"></div>
+        </div>
+
     </body>
     <script src="./assets/js/buy.js"></script>
 </html>

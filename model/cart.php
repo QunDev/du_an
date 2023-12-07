@@ -87,7 +87,7 @@
     }
 
     function getByIdBuy($id) {
-        $sql = "select b.buyId, b.buyDate, b.paymentMethod, b.totalAmount, b.quantityProduct, p.productName, s.shippingAddressId, p.imageURL, s.address, s.phone, s.name, so.status as isCompleted FROM `buy` as b 
+        $sql = "select b.buyId, b.buyDate, b.paymentMethod, b.totalAmount, b.quantityProduct, b.isCompleted as cp, p.productName, s.shippingAddressId, p.imageURL, s.address, s.phone, s.name, so.status as isCompleted FROM `buy` as b 
         INNER JOIN products as p on p.productID = b.productId
         INNER JOIN user as u on u.userID = b.userId
         INNER JOIN shippingAddress as s on s.shippingAddressId = b.shippingAddress
@@ -123,5 +123,22 @@
         pdo_execute($sql);
     }
 
+// Gửi cmt
+    function createCmt($userId, $productId, $star, $value, $date) {
+        $sql = "insert INTO `reviews`(`userID`, `productID`, `rating`, `comment`, `createdAt`) VALUES ('".$userId."','".$productId."','".$star."','".$value."','".$date."')";
+        pdo_execute($sql);
+    }
 
+    function getCmt($id) {
+        $sql = "select * FROM `reviews` as r inner join user as u on r.userID = u.userID WHERE productID =".$id."";
+        return pdo_query($sql);
+    }
+    function getQuantityCmt($id) {
+        $sql = "select count(reviewID) FROM `reviews` WHERE productID = ".$id."";
+        return pdo_query_value($sql);
+    }
+    function getAVGCmt($id) {
+        $sql = "select AVG(rating) FROM `reviews` WHERE productID = ".$id."";
+        return pdo_query_value($sql);
+    }
 ?>

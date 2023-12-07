@@ -172,6 +172,7 @@
                             $image = "";
                             $noImg = "No photo";
                         }
+                        $avg = round(getAVGCmt($productID), 1);
                         foreach ($dataCategories as $category) {
                             extract($category);
                             if ($categoryId == $brand) {
@@ -195,7 +196,7 @@
                                         <div class="product-card__row">
                                             <span class="product-card__price"> '.$price.'d</span>
                                             <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                            <span class="product-card__score">4.3</span>
+                                            <span class="product-card__score">'.$avg.'</span>
                                         </div>
                                     </article>
                                 </div>

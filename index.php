@@ -27,6 +27,9 @@
             case 'product-detail':
                 if(isset($_GET["id"])) {
                     $dataProduct = getDataById($_GET["id"]);
+                    $dataCmt = getCmt($_GET["id"]);
+                    $countCmt = getQuantityCmt($_GET["id"]);
+                    $avg = round(getAVGCmt($_GET["id"]), 1);
                     include "./view/product-detail.php";
                 }
                 break;
@@ -161,7 +164,7 @@
                     $address = $_GET["address"];
                     foreach (getOrder($_SESSION["email"]) as $value) {
                         extract($value);
-                        buySuccess($productID, $userId, date("l jS \of F Y h:i:s A"), "Đợi xác nhận", $pay, $address, $unitPrice + 3, $quantity);
+                        buySuccess($productID, $userId, date("l jS \of F Y h:i:s A"), "1", $pay, $address, $unitPrice + 3, $quantity);
                         deleteProductDone($orderDetailID);
                     }
                     extract($dataUser);
@@ -190,7 +193,7 @@
                 $id = $_GET["id"];
                 updateIn4($value, $id);
                 extract($dataUser);
-                $data = getBySuccess($userId);
+                $data = getBySuccess($userID);
                 include "./view/buy.php";
                 break;
             case 'updateName':
@@ -198,7 +201,7 @@
                 $id = $_GET["id"];
                 updateIn4Name($value, $id);
                 extract($dataUser);
-                $data = getBySuccess($userId);
+                $data = getBySuccess($userID);
                 include "./view/buy.php";
                 break;
             case 'updatePhone':
@@ -206,7 +209,16 @@
                 $id = $_GET["id"];
                 updateIn4Phone($value, $id);
                 extract($dataUser);
-                $data = getBySuccess($userId);
+                $data = getBySuccess($userID);
+                include "./view/buy.php";
+                break;
+            case 'cmt': 
+                extract($dataUser);
+                $value = $_GET["value"];
+                $star = $_GET["star"];
+                $idProduct = $_GET["idProduct"];
+                createCmt($userID, $idProduct, $star, $value, date("l jS \of F Y h:i:s A"));
+                $data = getBySuccess($userID);
                 include "./view/buy.php";
                 break;
             default:
